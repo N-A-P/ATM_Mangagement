@@ -28,14 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.SuspendLayout();
+            // 
+            // printPreviewControl1
+            // 
+            this.printPreviewControl1.Location = new System.Drawing.Point(188, 12);
+            this.printPreviewControl1.Name = "printPreviewControl1";
+            this.printPreviewControl1.Size = new System.Drawing.Size(542, 349);
+            this.printPreviewControl1.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 572);
-            this.IsMdiContainer = true;
+            this.Controls.Add(this.printPreviewControl1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -44,6 +52,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
     }
 }
 
