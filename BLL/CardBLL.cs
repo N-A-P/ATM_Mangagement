@@ -36,7 +36,6 @@ namespace BLL
         {
             Boolean result = false;
             SqlDataReader dr = cardDAL.getCardInfo(cardNo);
-            string card = "";
             string pin = "";
             while (dr.Read())
             {
