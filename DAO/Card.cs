@@ -6,17 +6,23 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    class Card
+    public class Card
     {
+
         public string CardNo { get; set; }
         public string Status { get; set; }
-        public string AccountID { get; set; }
+        public int AccountID { get; set; }
         public string PIN { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime ExpriredDate { get; set; }
         public int Attempt { get; set; }
 
-        public Card(string cardNo, string status, string accId, string Pin, DateTime startDate, DateTime expriredDate, int attempt)
+        public Card() {
+            this.CardNo = "";
+            this.Attempt = 3;
+        }
+
+        public Card(string cardNo, string status, int accId, string Pin, DateTime startDate, DateTime expriredDate)
         {
             this.CardNo = cardNo;
             this.Status = status;
@@ -24,7 +30,8 @@ namespace DAO
             this.PIN = Pin;
             this.StartDate = startDate;
             this.ExpriredDate = expriredDate;
-            this.Attempt = attempt;
+            this.Attempt = 3;
         }
+
     }
 }
