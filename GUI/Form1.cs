@@ -24,7 +24,7 @@ namespace GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            welcomeScreen();
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -96,5 +96,15 @@ namespace GUI
             else
                 label1.Text = "the khong hop le:";               
         }
+        
+        void welcomeScreen()
+        {
+            Label l = new Label();
+            l.Text = "Welcome to our bank system";
+            txtCardNo.Text = l.Text;
+        }
+
+        
+
     }
 }
