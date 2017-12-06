@@ -50,6 +50,10 @@
       <Project>{ba346752-e0cc-4c9a-b138-232c7d46f079}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{852d5350-bef7-4c90-b140-23890b1af8f0}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -16,3 +16,16 @@ C:\Users\Administrator\Desktop\ATM_Management\GUI\obj\Debug\GUI.exe
 C:\Users\Administrator\Desktop\ATM_Management\GUI\obj\Debug\GUI.pdb
 C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\bin\Debug\DAL.dll
 C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\bin\Debug\DAL.pdb
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\bin\Debug\GUI.exe.config
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\obj\Debug\GUI.exe
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\obj\Debug\GUI.pdb
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\bin\Debug\GUI.exe
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\bin\Debug\GUI.pdb
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\bin\Debug\BLL.dll
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\bin\Debug\DAO.dll
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\bin\Debug\BLL.pdb
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\bin\Debug\DAO.pdb
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\obj\Debug\GUI.Form1.resources
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
