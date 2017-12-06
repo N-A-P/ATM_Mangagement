@@ -30,10 +30,13 @@ namespace DAL
             DongKetNoi();
         }
 
-        public static SqlDataReader queryGetData(string str, SqlCommand cmd)
+        public static SqlDataReader queryGetData(string cardNo)
         {
             KetNoi();
-            cmd = new SqlCommand(str, conn);
+            
+            String cmdString = "SELECT * FROM Card WHERE CardNo = @cardNo";
+            SqlCommand cmd = new SqlCommand(cmdString,conn);
+            cmd.Parameters.AddWithValue("cardNo", cardNo);
             SqlDataReader dr ;
             dr = cmd.ExecuteReader();
             DongKetNoi();

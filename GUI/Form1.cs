@@ -20,7 +20,7 @@ namespace GUI
             InitializeComponent();
         }
 
-     
+        BLL.BLL bus = new BLL.BLL();
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -29,7 +29,72 @@ namespace GUI
 
         private void button17_Click(object sender, EventArgs e)
         {
-            panel3.Visible = !panel3.Visible;
+            cardpanel.Visible = !cardpanel.Visible;
+        }
+
+        private void btnNum1_Click(object sender, EventArgs e)
+        {
+            txtCardNo.Text = txtCardNo.Text + '1';
+        }
+
+        private void btnNum2_Click(object sender, EventArgs e)
+        {
+            txtCardNo.Text = txtCardNo.Text + '2';
+        }
+
+        private void btnNum3_Click(object sender, EventArgs e)
+        {
+            txtCardNo.Text = txtCardNo.Text + '3';
+        }
+
+        private void btnNum4_Click(object sender, EventArgs e)
+        {
+            txtCardNo.Text = txtCardNo.Text + '4';
+        }
+
+        private void btnNum5_Click(object sender, EventArgs e)
+        {
+            txtCardNo.Text = txtCardNo.Text + '5';
+        }
+
+        private void btnNum6_Click(object sender, EventArgs e)
+        {
+            txtCardNo.Text = txtCardNo.Text + '6';
+        }
+
+        private void btnNum7_Click(object sender, EventArgs e)
+        {
+            txtCardNo.Text = txtCardNo.Text + '7';
+        }
+
+        private void btnNum8_Click(object sender, EventArgs e)
+        {
+            txtCardNo.Text = txtCardNo.Text + '8';
+        }
+
+        private void btnNum9_Click(object sender, EventArgs e)
+        {
+            txtCardNo.Text = txtCardNo.Text + '9';
+        }
+
+        private void btnNum0_Click(object sender, EventArgs e)
+        {
+            txtCardNo.Text = txtCardNo.Text + '0';
+        }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            txtCardNo.Text = "";
+        }
+
+        private void btnInsertCard_Click(object sender, EventArgs e)
+        {
+            if (bus.checkCard(txtCardNo.Text) == true)
+            {
+                label1.Text = "nhap ma pin";
+            }
+            else
+                label1.Text = "the khong hop le:";               
         }
     }
 }

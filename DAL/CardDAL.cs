@@ -13,10 +13,10 @@ namespace DAL
     {
         public SqlDataReader getCardInfo(string cardNo) 
         {
-            String cmdString = "SELECT FROM Card WHERE CardNo = @cardNo";
-            SqlCommand cmd =  new SqlCommand();
-            cmd.Parameters.AddWithValue("cardNo",cardNo);
-            SqlDataReader dr = ServiceManager.queryGetData(cmdString,cmd);
+            //String cmdString = "SELECT * FROM Card WHERE CardNo = @cardNo";
+            //SqlCommand cmd =  new SqlCommand();
+            //cmd.Parameters.AddWithValue("cardNo",cardNo);
+            SqlDataReader dr = ServiceManager.queryGetData(cardNo);
             return dr;
         }
     }
