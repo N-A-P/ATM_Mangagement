@@ -86,8 +86,8 @@
       <Project>{8b3a576c-8950-485b-82d5-aaadf4503c7d}</Project>
       <Name>BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ClassLibrary1\DAO.csproj">
-      <Project>{eeccbeff-344e-4353-8980-ea519888d11f}</Project>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{852d5350-bef7-4c90-b140-23890b1af8f0}</Project>
       <Name>DAO</Name>
     </ProjectReference>
   </ItemGroup>

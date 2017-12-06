@@ -45,8 +45,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\DAO.csproj">
-      <Project>{eeccbeff-344e-4353-8980-ea519888d11f}</Project>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{852d5350-bef7-4c90-b140-23890b1af8f0}</Project>
       <Name>DAO</Name>
     </ProjectReference>
   </ItemGroup>

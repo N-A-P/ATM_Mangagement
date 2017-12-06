@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DAO;
+
 
 namespace GUI
 {
@@ -17,14 +20,16 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
-        }
+     
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void button17_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = !panel3.Visible;
         }
     }
 }

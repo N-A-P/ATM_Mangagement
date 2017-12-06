@@ -7,3 +7,7 @@ c:\users\administrator\documents\visual studio 2015\Projects\ATM__Management\GUI
 c:\users\administrator\documents\visual studio 2015\Projects\ATM__Management\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
 c:\users\administrator\documents\visual studio 2015\Projects\ATM__Management\GUI\obj\Debug\GUI.exe
 c:\users\administrator\documents\visual studio 2015\Projects\ATM__Management\GUI\obj\Debug\GUI.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\ATM__Management\GUI\bin\Debug\BLL.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\ATM__Management\GUI\bin\Debug\BLL.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\ATM__Management\GUI\bin\Debug\DAO.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\ATM__Management\GUI\bin\Debug\DAO.pdb
