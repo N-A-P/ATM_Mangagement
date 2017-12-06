@@ -11,13 +11,25 @@ namespace DAL
 {
     public class CardDAL
     {
-        public SqlDataReader getCardInfo(string cardNo) 
+        public Card getCardInfo(string cardNo) 
         {
-            //String cmdString = "SELECT * FROM Card WHERE CardNo = @cardNo";
-            //SqlCommand cmd =  new SqlCommand();
-            //cmd.Parameters.AddWithValue("cardNo",cardNo);
-            SqlDataReader dr = ServiceManager.queryGetData(cardNo);
-            return dr;
+            ServiceManager.KetNoi();
+            Card card = new Card();
+            String cmdString = "SELECT * FROM Card WHERE CardNo = @cardNo";
+            SqlCommand cmd = new SqlCommand(cmdString, ServiceManager.conn);
+            cmd.Parameters.AddWithValue("cardNo", cardNo);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read()) {
+                string no               = dr["CardNo"].ToString();
+                string pin              = dr["PIN"].ToString();
+                string status           = dr["Status"].ToString();
+                DateTime startDate      = (DateTime)dr["StartDate"];
+                DateTime expiredDate    = (DateTime)dr["ExpiredDate"];
+                int accID               = (int)dr["AccountID"];
+                card = new Card(no,status, accID, pin, startDate, expiredDate);
+            }
+            ServiceManager.DongKetNoi();
+            return card;
         }
     }
 }
