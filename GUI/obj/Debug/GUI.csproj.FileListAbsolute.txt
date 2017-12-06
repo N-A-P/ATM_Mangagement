@@ -27,3 +27,5 @@ C:\Users\Doan Tuan\Desktop\WorkSpace\atm\GUI\obj\Debug\GUI.csproj.GenerateResour
 C:\Users\Administrator\Desktop\ATM_Management\GUI\bin\Debug\GUI.exe.config
 C:\Users\Administrator\Desktop\ATM_Management\GUI\obj\Debug\GUI.exe
 C:\Users\Administrator\Desktop\ATM_Management\GUI\obj\Debug\GUI.pdb
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\bin\Debug\DAL.dll
+C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\bin\Debug\DAL.pdb
