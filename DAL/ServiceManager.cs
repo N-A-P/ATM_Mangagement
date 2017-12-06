@@ -30,14 +30,14 @@ namespace DAL
             DongKetNoi();
         }
 
-        public static DataTable queryGetData(string str, SqlCommand cmd)
+        public static SqlDataReader queryGetData(string str, SqlCommand cmd)
         {
             KetNoi();
-            DataTable dt = new DataTable();
-            cmd = new SqlCommand(str,conn);
-            dt.Load(cmd.ExecuteReader());
+            cmd = new SqlCommand(str, conn);
+            SqlDataReader dr = new SqlDataReader();
+            dr = cmd.ExecuteReader();
             DongKetNoi();
-            return dt;
+            return dr;
         }
     }
 }
