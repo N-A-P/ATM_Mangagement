@@ -34,7 +34,7 @@ namespace DAL
         {
             KetNoi();
             cmd = new SqlCommand(str, conn);
-            SqlDataReader dr = new SqlDataReader();
+            SqlDataReader dr;
             dr = cmd.ExecuteReader();
             DongKetNoi();
             return dr;
