@@ -37,23 +37,24 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnNum1 = new System.Windows.Forms.Button();
-            this.btnNum2 = new System.Windows.Forms.Button();
-            this.btnNum3 = new System.Windows.Forms.Button();
-            this.btnNum4 = new System.Windows.Forms.Button();
-            this.btnNum5 = new System.Windows.Forms.Button();
-            this.btnNum6 = new System.Windows.Forms.Button();
-            this.btnNum7 = new System.Windows.Forms.Button();
-            this.btnNum8 = new System.Windows.Forms.Button();
-            this.btnNum9 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.btnNum0 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
+            this.btnNum9 = new System.Windows.Forms.Button();
+            this.btnNum6 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.btnNum3 = new System.Windows.Forms.Button();
+            this.btnNum0 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.btnNum8 = new System.Windows.Forms.Button();
+            this.btnNum7 = new System.Windows.Forms.Button();
+            this.btnNum5 = new System.Windows.Forms.Button();
+            this.btnNum4 = new System.Windows.Forms.Button();
+            this.btnNum2 = new System.Windows.Forms.Button();
+            this.btnNum1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnInsertCard = new System.Windows.Forms.Button();
+            this.txtCardNo = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -128,90 +129,6 @@
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.btnInsertCard);
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
-            // 
-            // btnNum1
-            // 
-            this.btnNum1.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnNum1, "btnNum1");
-            this.btnNum1.Name = "btnNum1";
-            this.btnNum1.UseVisualStyleBackColor = true;
-            // 
-            // btnNum2
-            // 
-            this.btnNum2.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnNum2, "btnNum2");
-            this.btnNum2.Name = "btnNum2";
-            this.btnNum2.UseVisualStyleBackColor = true;
-            // 
-            // btnNum3
-            // 
-            this.btnNum3.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnNum3, "btnNum3");
-            this.btnNum3.Name = "btnNum3";
-            this.btnNum3.UseVisualStyleBackColor = true;
-            // 
-            // btnNum4
-            // 
-            this.btnNum4.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnNum4, "btnNum4");
-            this.btnNum4.Name = "btnNum4";
-            this.btnNum4.UseVisualStyleBackColor = true;
-            // 
-            // btnNum5
-            // 
-            this.btnNum5.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnNum5, "btnNum5");
-            this.btnNum5.Name = "btnNum5";
-            this.btnNum5.UseVisualStyleBackColor = true;
-            // 
-            // btnNum6
-            // 
-            this.btnNum6.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnNum6, "btnNum6");
-            this.btnNum6.Name = "btnNum6";
-            this.btnNum6.UseVisualStyleBackColor = true;
-            // 
-            // btnNum7
-            // 
-            this.btnNum7.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnNum7, "btnNum7");
-            this.btnNum7.Name = "btnNum7";
-            this.btnNum7.UseVisualStyleBackColor = true;
-            // 
-            // btnNum8
-            // 
-            this.btnNum8.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnNum8, "btnNum8");
-            this.btnNum8.Name = "btnNum8";
-            this.btnNum8.UseVisualStyleBackColor = true;
-            // 
-            // btnNum9
-            // 
-            this.btnNum9.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnNum9, "btnNum9");
-            this.btnNum9.Name = "btnNum9";
-            this.btnNum9.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.button15, "button15");
-            this.button15.Name = "button15";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // btnNum0
-            // 
-            this.btnNum0.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnNum0, "btnNum0");
-            this.btnNum0.Name = "btnNum0";
-            this.btnNum0.UseVisualStyleBackColor = true;
-            // 
             // button17
             // 
             this.button17.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -220,19 +137,19 @@
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
-            // button18
+            // btnNum9
             // 
-            this.button18.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.button18, "button18");
-            this.button18.Name = "button18";
-            this.button18.UseVisualStyleBackColor = true;
+            this.btnNum9.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnNum9, "btnNum9");
+            this.btnNum9.Name = "btnNum9";
+            this.btnNum9.UseVisualStyleBackColor = true;
             // 
-            // button19
+            // btnNum6
             // 
-            this.button19.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.button19, "button19");
-            this.button19.Name = "button19";
-            this.button19.UseVisualStyleBackColor = true;
+            this.btnNum6.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnNum6, "btnNum6");
+            this.btnNum6.Name = "btnNum6";
+            this.btnNum6.UseVisualStyleBackColor = true;
             // 
             // button20
             // 
@@ -241,11 +158,101 @@
             this.button20.Name = "button20";
             this.button20.UseVisualStyleBackColor = true;
             // 
+            // button19
+            // 
+            this.button19.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.button19, "button19");
+            this.button19.Name = "button19";
+            this.button19.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.button18, "button18");
+            this.button18.Name = "button18";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // btnNum3
+            // 
+            this.btnNum3.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnNum3, "btnNum3");
+            this.btnNum3.Name = "btnNum3";
+            this.btnNum3.UseVisualStyleBackColor = true;
+            // 
+            // btnNum0
+            // 
+            this.btnNum0.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnNum0, "btnNum0");
+            this.btnNum0.Name = "btnNum0";
+            this.btnNum0.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.button15, "button15");
+            this.button15.Name = "button15";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // btnNum8
+            // 
+            this.btnNum8.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnNum8, "btnNum8");
+            this.btnNum8.Name = "btnNum8";
+            this.btnNum8.UseVisualStyleBackColor = true;
+            // 
+            // btnNum7
+            // 
+            this.btnNum7.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnNum7, "btnNum7");
+            this.btnNum7.Name = "btnNum7";
+            this.btnNum7.UseVisualStyleBackColor = true;
+            // 
+            // btnNum5
+            // 
+            this.btnNum5.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnNum5, "btnNum5");
+            this.btnNum5.Name = "btnNum5";
+            this.btnNum5.UseVisualStyleBackColor = true;
+            // 
+            // btnNum4
+            // 
+            this.btnNum4.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnNum4, "btnNum4");
+            this.btnNum4.Name = "btnNum4";
+            this.btnNum4.UseVisualStyleBackColor = true;
+            // 
+            // btnNum2
+            // 
+            this.btnNum2.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnNum2, "btnNum2");
+            this.btnNum2.Name = "btnNum2";
+            this.btnNum2.UseVisualStyleBackColor = true;
+            // 
+            // btnNum1
+            // 
+            this.btnNum1.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnNum1, "btnNum1");
+            this.btnNum1.Name = "btnNum1";
+            this.btnNum1.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.txtCardNo);
+            this.panel3.Controls.Add(this.btnInsertCard);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
             // btnInsertCard
             // 
             resources.ApplyResources(this.btnInsertCard, "btnInsertCard");
             this.btnInsertCard.Name = "btnInsertCard";
             this.btnInsertCard.UseVisualStyleBackColor = true;
+            // 
+            // txtCardNo
+            // 
+            resources.ApplyResources(this.txtCardNo, "txtCardNo");
+            this.txtCardNo.Name = "txtCardNo";
             // 
             // Form1
             // 
@@ -264,6 +271,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -295,6 +303,7 @@
         private System.Windows.Forms.Button btnNum1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnInsertCard;
+        private System.Windows.Forms.TextBox txtCardNo;
     }
 }
 
