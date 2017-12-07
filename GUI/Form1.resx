@@ -117,10 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>361, 278</value>
@@ -152,6 +148,7 @@
   <data name="screen.Size" type="System.Drawing.Size, System.Drawing">
     <value>917, 446</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="screen.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -310,6 +307,183 @@
   </data>
   <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnNum9.Name" xml:space="preserve">
+    <value>btnNum9</value>
+  </data>
+  <data name="&gt;&gt;btnNum9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNum9.Parent" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;btnNum9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnNum6.Name" xml:space="preserve">
+    <value>btnNum6</value>
+  </data>
+  <data name="&gt;&gt;btnNum6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNum6.Parent" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;btnNum6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnenter.Name" xml:space="preserve">
+    <value>btnenter</value>
+  </data>
+  <data name="&gt;&gt;btnenter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnenter.Parent" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;btnenter.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnclear.Name" xml:space="preserve">
+    <value>btnclear</value>
+  </data>
+  <data name="&gt;&gt;btnclear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnclear.Parent" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;btnclear.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btncancel.Name" xml:space="preserve">
+    <value>btncancel</value>
+  </data>
+  <data name="&gt;&gt;btncancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btncancel.Parent" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;btncancel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnNum3.Name" xml:space="preserve">
+    <value>btnNum3</value>
+  </data>
+  <data name="&gt;&gt;btnNum3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNum3.Parent" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;btnNum3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnNum0.Name" xml:space="preserve">
+    <value>btnNum0</value>
+  </data>
+  <data name="&gt;&gt;btnNum0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNum0.Parent" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;btnNum0.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btnNum8.Name" xml:space="preserve">
+    <value>btnNum8</value>
+  </data>
+  <data name="&gt;&gt;btnNum8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNum8.Parent" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;btnNum8.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;btnNum7.Name" xml:space="preserve">
+    <value>btnNum7</value>
+  </data>
+  <data name="&gt;&gt;btnNum7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNum7.Parent" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;btnNum7.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btnNum5.Name" xml:space="preserve">
+    <value>btnNum5</value>
+  </data>
+  <data name="&gt;&gt;btnNum5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNum5.Parent" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;btnNum5.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;btnNum4.Name" xml:space="preserve">
+    <value>btnNum4</value>
+  </data>
+  <data name="&gt;&gt;btnNum4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNum4.Parent" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;btnNum4.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;btnNum2.Name" xml:space="preserve">
+    <value>btnNum2</value>
+  </data>
+  <data name="&gt;&gt;btnNum2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNum2.Parent" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;btnNum2.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;btnNum1.Name" xml:space="preserve">
+    <value>btnNum1</value>
+  </data>
+  <data name="&gt;&gt;btnNum1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNum1.Parent" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;btnNum1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="keypad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>429, 486</value>
+  </data>
+  <data name="keypad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 194</value>
+  </data>
+  <data name="keypad.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;keypad.Name" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;keypad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;keypad.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;keypad.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="btnNum9.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 114</value>
@@ -630,29 +804,29 @@
   <data name="&gt;&gt;btnNum1.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="keypad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>429, 486</value>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="keypad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 194</value>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 74</value>
   </data>
-  <data name="keypad.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 13</value>
   </data>
-  <data name="&gt;&gt;keypad.Name" xml:space="preserve">
-    <value>keypad</value>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;keypad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
   </data>
-  <data name="&gt;&gt;keypad.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;keypad.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>cardpanel</value>
   </data>
-  <data name="txtCardNo.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="txtCardNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>41, 40</value>
@@ -673,7 +847,7 @@
     <value>cardpanel</value>
   </data>
   <data name="&gt;&gt;txtCardNo.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnInsertCard.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 8.25pt, style=Bold</value>
@@ -703,7 +877,7 @@
     <value>cardpanel</value>
   </data>
   <data name="&gt;&gt;btnInsertCard.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="cardpanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>802, 486</value>
