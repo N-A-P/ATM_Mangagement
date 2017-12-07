@@ -21,10 +21,11 @@ namespace GUI
         }
 
         BLL.BLL bus = new BLL.BLL();
+        string cardnumb;
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            welcomeScreen();
+            
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -92,19 +93,21 @@ namespace GUI
             if (bus.checkCard(txtCardNo.Text) == true)
             {
                 label1.Text = "nhap ma pin";
+                cardnumb = txtCardNo.Text;
             }
             else
                 label1.Text = "the khong hop le:";               
         }
         
-        void welcomeScreen()
+
+        private void btnenter_Click(object sender, EventArgs e)
         {
-            Label l = new Label();
-            l.Text = "Welcome to our bank system";
-            txtCardNo.Text = l.Text;
+            if (bus.checkPIN(cardnumb, txtCardNo.Text))
+            {
+                label1.Text = "Đăng nhập thành công!";
+            }
+            else
+                label1.Text = "failed";
         }
-
-        
-
     }
 }
