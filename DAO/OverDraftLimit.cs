@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace DAO
 {
-    class OverDraftLimit
+    public class OverDraftLimit
     {
         private int _ODID;
         private int _Value;
@@ -22,11 +23,20 @@ namespace DAO
             get { return _Value; }
             set { _Value = value; }
         }
-        
+
+        public OverDraftLimit() { }
+
         public OverDraftLimit(int odId, int value)
         {
             this._ODID = odId;
             this._Value = value;
+        }
+        public OverDraftLimit(SqlDataReader dr) {
+            while (dr.Read())
+            {
+                this._ODID = (int)dr["ODID"];
+                this._Value = (int)dr["Value"];
+            }
         }
     }
 }

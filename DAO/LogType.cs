@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    class LogType
+    public class LogType
     {
-        private string _LogTypeID;
+        private int _LogTypeID;
 
-        public string LogTypeID
+        public int LogTypeID
         {
             get { return _LogTypeID; }
             set { _LogTypeID = value; }
@@ -24,7 +24,9 @@ namespace DAO
             set { _Description = value; }
         }
 
-        public LogType(string id, string des)
+        public LogType() { }
+
+        public LogType(int id, string des)
         {
             this._LogTypeID = id;
             this._Description = des;
