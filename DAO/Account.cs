@@ -3,26 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace DAO
 {
-    class Account
+   public class Account
     {
-        public string AccountID { get; set; }
+        public int AccountID { get; set; }
         public string CustID { get; set; }
         public string AccountNo { get; set; }
         public string ODID { get; set; }
         public string WDID { get; set; }
-        public string Balance { get; set; }
+        public int Balance { get; set; }
+        public Customer Customer { get; set; }
+        public OverDraftLimit OverDraft { get; set; }
+        public WithDrawLimit WithDraw { get; set; }
 
-        public Account(string accId, string custId, string accNo, string odId, string wdId, string balance)
+        public Account() { }
+
+        public Account(int accId, string accNo, int balance, Customer customer, OverDraftLimit overDraft, WithDrawLimit withDraw)
         {
             this.AccountID = accId;
-            this.CustID = custId;
             this.AccountNo = accNo;
-            this.ODID = odId;
-            this.WDID = wdId;
             this.Balance = balance;
+            this.Customer = customer;
+            this.OverDraft = overDraft;
+            this.WithDraw = withDraw;
+        }
+
+        public Account(SqlDataReader dr)
+        {
+            while (dr.Read())
+            {
+                this.AccountID = (int)dr["AccountID"];
+                this.Balance = (int)dr["Balance"];
+                this.AccountNo = dr["AccountNo"].ToString();
+                this.Customer = new Customer(dr);
+                this.OverDraft = new OverDraftLimit(dr);
+                this.WithDraw = new WithDrawLimit(dr);
+            }
         }
     }
 }

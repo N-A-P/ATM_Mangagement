@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    class ATM
+    public class ATM
     {
-        private string _ATMID;
+        private int _ATMID;
 
-        public string ATMID
+        public int ATMID
         {
             get { return _ATMID; }
             set { _ATMID = value; }
@@ -32,7 +32,9 @@ namespace DAO
             set { _Address = value; }
         }
 
-        public ATM(string id, string branch, string address)
+        public ATM() { }
+
+        public ATM(int id, string branch, string address)
         {
             this._ATMID = id;
             this._Branch = branch;
