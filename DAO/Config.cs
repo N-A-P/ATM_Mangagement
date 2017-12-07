@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    class Config
+    public class Config
     {
         public int ConfigID { get; set; }
         public int MinWithdraw { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    class Stock
+    public class Stock
     {
         private string _StockID;
 

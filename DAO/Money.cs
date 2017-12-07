@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    class Money
+    public class Money
     {
         private string _MoneyID;
 
