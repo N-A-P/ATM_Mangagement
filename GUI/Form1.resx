@@ -119,10 +119,14 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="screen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 12</value>
+    <value>296, 23</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="screen.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="screen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>917, 446</value>
+    <value>1832, 856</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="screen.TabIndex" type="System.Int32, mscorlib">
@@ -141,10 +145,13 @@
     <value>8</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 224</value>
+    <value>70, 431</value>
+  </data>
+  <data name="button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>150, 44</value>
   </data>
   <data name="button2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -165,10 +172,13 @@
     <value>7</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 368</value>
+    <value>70, 708</value>
+  </data>
+  <data name="button3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>150, 44</value>
   </data>
   <data name="button3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -189,10 +199,13 @@
     <value>3</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 83</value>
+    <value>70, 160</value>
+  </data>
+  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>150, 44</value>
   </data>
   <data name="button1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -213,10 +226,13 @@
     <value>5</value>
   </data>
   <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1120, 224</value>
+    <value>2240, 431</value>
+  </data>
+  <data name="button5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>150, 44</value>
   </data>
   <data name="button5.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -237,10 +253,13 @@
     <value>6</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1120, 83</value>
+    <value>2240, 160</value>
+  </data>
+  <data name="button4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>150, 44</value>
   </data>
   <data name="button4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -261,10 +280,13 @@
     <value>4</value>
   </data>
   <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1120, 368</value>
+    <value>2240, 708</value>
+  </data>
+  <data name="button6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>150, 44</value>
   </data>
   <data name="button6.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -284,188 +306,14 @@
   <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;btnNum9.Name" xml:space="preserve">
-    <value>btnNum9</value>
-  </data>
-  <data name="&gt;&gt;btnNum9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum9.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum9.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnNum6.Name" xml:space="preserve">
-    <value>btnNum6</value>
-  </data>
-  <data name="&gt;&gt;btnNum6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum6.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum6.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnenter.Name" xml:space="preserve">
-    <value>btnenter</value>
-  </data>
-  <data name="&gt;&gt;btnenter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnenter.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnenter.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnclear.Name" xml:space="preserve">
-    <value>btnclear</value>
-  </data>
-  <data name="&gt;&gt;btnclear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnclear.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnclear.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btncancel.Name" xml:space="preserve">
-    <value>btncancel</value>
-  </data>
-  <data name="&gt;&gt;btncancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btncancel.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btncancel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnNum3.Name" xml:space="preserve">
-    <value>btnNum3</value>
-  </data>
-  <data name="&gt;&gt;btnNum3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum3.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum3.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;btnNum0.Name" xml:space="preserve">
-    <value>btnNum0</value>
-  </data>
-  <data name="&gt;&gt;btnNum0.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum0.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum0.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;btnNum8.Name" xml:space="preserve">
-    <value>btnNum8</value>
-  </data>
-  <data name="&gt;&gt;btnNum8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum8.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum8.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;btnNum7.Name" xml:space="preserve">
-    <value>btnNum7</value>
-  </data>
-  <data name="&gt;&gt;btnNum7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum7.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum7.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;btnNum5.Name" xml:space="preserve">
-    <value>btnNum5</value>
-  </data>
-  <data name="&gt;&gt;btnNum5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum5.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum5.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;btnNum4.Name" xml:space="preserve">
-    <value>btnNum4</value>
-  </data>
-  <data name="&gt;&gt;btnNum4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum4.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum4.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;btnNum2.Name" xml:space="preserve">
-    <value>btnNum2</value>
-  </data>
-  <data name="&gt;&gt;btnNum2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum2.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum2.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;btnNum1.Name" xml:space="preserve">
-    <value>btnNum1</value>
-  </data>
-  <data name="&gt;&gt;btnNum1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum1.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum1.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="keypad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>429, 486</value>
-  </data>
-  <data name="keypad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 194</value>
-  </data>
-  <data name="keypad.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;keypad.Name" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;keypad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;keypad.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;keypad.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="btnNum9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 114</value>
+    <value>300, 219</value>
+  </data>
+  <data name="btnNum9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnNum9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 29</value>
+    <value>72, 56</value>
   </data>
   <data name="btnNum9.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -485,15 +333,17 @@
   <data name="&gt;&gt;btnNum9.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnNum6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnNum6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 66</value>
+    <value>300, 127</value>
+  </data>
+  <data name="btnNum6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnNum6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 29</value>
+    <value>72, 56</value>
   </data>
   <data name="btnNum6.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -514,10 +364,13 @@
     <value>1</value>
   </data>
   <data name="btnenter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 114</value>
+    <value>440, 219</value>
+  </data>
+  <data name="btnenter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnenter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>150, 44</value>
   </data>
   <data name="btnenter.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -538,10 +391,13 @@
     <value>2</value>
   </data>
   <data name="btnclear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 66</value>
+    <value>440, 127</value>
+  </data>
+  <data name="btnclear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnclear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>150, 44</value>
   </data>
   <data name="btnclear.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -562,10 +418,13 @@
     <value>3</value>
   </data>
   <data name="btncancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 23</value>
+    <value>440, 44</value>
+  </data>
+  <data name="btncancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btncancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>150, 44</value>
   </data>
   <data name="btncancel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -586,10 +445,13 @@
     <value>4</value>
   </data>
   <data name="btnNum3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 23</value>
+    <value>300, 44</value>
+  </data>
+  <data name="btnNum3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnNum3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 29</value>
+    <value>72, 56</value>
   </data>
   <data name="btnNum3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -610,10 +472,13 @@
     <value>5</value>
   </data>
   <data name="btnNum0.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 158</value>
+    <value>184, 304</value>
+  </data>
+  <data name="btnNum0.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnNum0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 29</value>
+    <value>72, 56</value>
   </data>
   <data name="btnNum0.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -634,10 +499,13 @@
     <value>6</value>
   </data>
   <data name="btnNum8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 114</value>
+    <value>184, 219</value>
+  </data>
+  <data name="btnNum8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnNum8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 29</value>
+    <value>72, 56</value>
   </data>
   <data name="btnNum8.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -658,10 +526,13 @@
     <value>7</value>
   </data>
   <data name="btnNum7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 114</value>
+    <value>68, 219</value>
+  </data>
+  <data name="btnNum7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnNum7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 29</value>
+    <value>72, 56</value>
   </data>
   <data name="btnNum7.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -685,10 +556,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnNum5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 66</value>
+    <value>184, 127</value>
+  </data>
+  <data name="btnNum5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnNum5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 29</value>
+    <value>72, 56</value>
   </data>
   <data name="btnNum5.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -709,10 +583,13 @@
     <value>9</value>
   </data>
   <data name="btnNum4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 66</value>
+    <value>68, 127</value>
+  </data>
+  <data name="btnNum4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnNum4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 29</value>
+    <value>72, 56</value>
   </data>
   <data name="btnNum4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -733,10 +610,13 @@
     <value>10</value>
   </data>
   <data name="btnNum2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 23</value>
+    <value>184, 44</value>
+  </data>
+  <data name="btnNum2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnNum2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 29</value>
+    <value>72, 56</value>
   </data>
   <data name="btnNum2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -757,10 +637,13 @@
     <value>11</value>
   </data>
   <data name="btnNum1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 23</value>
+    <value>68, 44</value>
+  </data>
+  <data name="btnNum1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnNum1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 29</value>
+    <value>72, 56</value>
   </data>
   <data name="btnNum1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -780,14 +663,41 @@
   <data name="&gt;&gt;btnNum1.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <data name="keypad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>858, 935</value>
+  </data>
+  <data name="keypad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="keypad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>648, 369</value>
+  </data>
+  <data name="keypad.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;keypad.Name" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;keypad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;keypad.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;keypad.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 74</value>
+    <value>238, 142</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 6, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 13</value>
+    <value>0, 25</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -805,10 +715,13 @@
     <value>0</value>
   </data>
   <data name="txtCardNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 40</value>
+    <value>82, 77</value>
+  </data>
+  <data name="txtCardNo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="txtCardNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 20</value>
+    <value>360, 31</value>
   </data>
   <data name="txtCardNo.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -832,10 +745,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnInsertCard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 114</value>
+    <value>146, 219</value>
+  </data>
+  <data name="btnInsertCard.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnInsertCard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 57</value>
+    <value>256, 110</value>
   </data>
   <data name="btnInsertCard.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -856,10 +772,13 @@
     <value>2</value>
   </data>
   <data name="cardpanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>802, 486</value>
+    <value>1604, 935</value>
+  </data>
+  <data name="cardpanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="cardpanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 194</value>
+    <value>522, 369</value>
   </data>
   <data name="cardpanel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -880,16 +799,19 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>12, 25</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1226, 692</value>
+    <value>2432, 1269</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1242, 731</value>
+    <value>2458, 1340</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1242, 731</value>
+    <value>2458, 1340</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

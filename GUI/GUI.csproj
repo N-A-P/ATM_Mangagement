@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckBalance.Designer.cs">
+      <DependentUpon>CheckBalance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,15 @@
     <Compile Include="Validationfrm.Designer.cs">
       <DependentUpon>Validationfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewHistory.Designer.cs">
+      <DependentUpon>ViewHistory.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CheckBalance.resx">
+      <DependentUpon>CheckBalance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +91,9 @@
     </Compile>
     <EmbeddedResource Include="Validationfrm.resx">
       <DependentUpon>Validationfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewHistory.resx">
+      <DependentUpon>ViewHistory.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
