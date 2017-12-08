@@ -41,3 +41,4 @@ C:\Users\Administrator\Desktop\ATM_Management\GUI\bin\Debug\DAL.dll
 C:\Users\Administrator\Desktop\ATM_Management\GUI\bin\Debug\BLL.pdb
 C:\Users\Administrator\Desktop\ATM_Management\GUI\bin\Debug\DAO.pdb
 C:\Users\Administrator\Desktop\ATM_Management\GUI\bin\Debug\DAL.pdb
+C:\Users\Administrator\Desktop\ATM_Management\GUI\obj\Debug\GUI.Validationfrm.resources
