@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAO;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace DAL
@@ -28,28 +29,30 @@ namespace DAL
             cmd.ExecuteNonQuery();
             ServiceManager.DongKetNoi();
         }
-        public Log getLog(string cardNo) {
-            Log log = new Log();
 
+        public DataTable getLogs(string cardNo) {
             ServiceManager.KetNoi();
             String cmdString =
                             @"SELECT * FROM LOG WHERE CardNo = @cardNo";
             SqlCommand cmd = new SqlCommand(cmdString, ServiceManager.conn);
             cmd.Parameters.AddWithValue("cardNo", cardNo);
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read()) {
-                int logID = (int)dr["LogID"];
-                DateTime logDate = (DateTime)dr["LogDate"];
-                int amo = (int)dr["Amount"];
-                string details = dr["Details"].ToString();
-                int logTypeID = (int)dr["LogTypeID"];
-                int atmID = (int)dr["ATMID"];
-                string card = dr["CardNo"].ToString();
-                string toCardNo = dr["ToCard"].ToString();
-                log = new Log(logID, logTypeID, atmID, card, logDate, amo, details, toCardNo);
-            }
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            //SqlDataReader dr = cmd.ExecuteReader();
+            //while (dr.Read()) {
+            //    Log log = new Log();
+            //    int logID = (int)dr["LogID"];
+            //    DateTime logDate = (DateTime)dr["LogDate"];
+            //    int amo = (int)dr["Amount"];
+            //    string details = dr["Details"].ToString();
+            //    int logTypeID = (int)dr["LogTypeID"];
+            //    int atmID = (int)dr["ATMID"];
+            //    string card = dr["CardNo"].ToString();
+            //    string toCardNo = dr["ToCard"].ToString();
+            //    log = new Log(logID, logTypeID, atmID, card, logDate, amo, details, toCardNo);
+            //}
             ServiceManager.DongKetNoi();
-            return log;
+            return dt;
         }
     }
 }
