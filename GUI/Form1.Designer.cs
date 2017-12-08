@@ -54,7 +54,6 @@
             this.txtCardNo = new System.Windows.Forms.TextBox();
             this.btnInsertCard = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.screen.SuspendLayout();
             this.keypad.SuspendLayout();
             this.cardpanel.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +61,6 @@
             // screen
             // 
             this.screen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.screen.Controls.Add(this.label1);
             this.screen.Cursor = System.Windows.Forms.Cursors.Arrow;
             resources.ApplyResources(this.screen, "screen");
             this.screen.Name = "screen";
@@ -150,6 +148,7 @@
             resources.ApplyResources(this.btnenter, "btnenter");
             this.btnenter.Name = "btnenter";
             this.btnenter.UseVisualStyleBackColor = true;
+            this.btnenter.Click += new System.EventHandler(this.btnenter_Click);
             // 
             // btnclear
             // 
@@ -233,6 +232,7 @@
             // cardpanel
             // 
             this.cardpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.cardpanel.Controls.Add(this.label1);
             this.cardpanel.Controls.Add(this.txtCardNo);
             this.cardpanel.Controls.Add(this.btnInsertCard);
             resources.ApplyResources(this.cardpanel, "cardpanel");
@@ -270,8 +270,6 @@
             this.Controls.Add(this.screen);
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.screen.ResumeLayout(false);
-            this.screen.PerformLayout();
             this.keypad.ResumeLayout(false);
             this.cardpanel.ResumeLayout(false);
             this.cardpanel.PerformLayout();

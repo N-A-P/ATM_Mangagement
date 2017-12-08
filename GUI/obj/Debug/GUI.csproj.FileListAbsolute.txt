@@ -29,3 +29,16 @@ C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\obj\Debug\GUI.csprojResolveAssembly
 C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\obj\Debug\GUI.Form1.resources
 C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\obj\Debug\GUI.Properties.Resources.resources
 C:\Users\Doan Tuan\Desktop\WorkSpace\ATM\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\ATM_Management\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\ATM_Management\GUI\obj\Debug\GUI.Form1.resources
+C:\Users\Administrator\Desktop\ATM_Management\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Administrator\Desktop\ATM_Management\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\ATM_Management\GUI\bin\Debug\GUI.exe
+C:\Users\Administrator\Desktop\ATM_Management\GUI\bin\Debug\GUI.pdb
+C:\Users\Administrator\Desktop\ATM_Management\GUI\bin\Debug\BLL.dll
+C:\Users\Administrator\Desktop\ATM_Management\GUI\bin\Debug\DAO.dll
+C:\Users\Administrator\Desktop\ATM_Management\GUI\bin\Debug\DAL.dll
+C:\Users\Administrator\Desktop\ATM_Management\GUI\bin\Debug\BLL.pdb
+C:\Users\Administrator\Desktop\ATM_Management\GUI\bin\Debug\DAO.pdb
+C:\Users\Administrator\Desktop\ATM_Management\GUI\bin\Debug\DAL.pdb
+C:\Users\Administrator\Desktop\ATM_Management\GUI\obj\Debug\GUI.Validationfrm.resources
