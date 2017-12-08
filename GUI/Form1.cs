@@ -18,15 +18,18 @@ namespace GUI
         public Form1()
         {
             InitializeComponent();
+            this.IsMdiContainer = true;
         }
 
         BLL.BLL bus = new BLL.BLL();
-        string cardnumb;
+        public string cardnumb;
+        Form welcomescr = new Form();
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.IsMdiContainer = true;
-            Form welcomescr = new Form();
+
+
             welcomescr.MdiParent = this;
             welcomescr.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             welcomescr.Dock = DockStyle.Fill;
@@ -98,10 +101,14 @@ namespace GUI
         private void btnclear_Click(object sender, EventArgs e)
         {
             txtCardNo.Text = "";
+            SwitchScreen(this.MdiChildren[0]);
         }
 
         private void btnInsertCard_Click(object sender, EventArgs e)
         {
+            
+            Validationfrm form = new Validationfrm();
+            SwitchScreen(form);
             if (bus.checkCard(txtCardNo.Text) == true)
             {
                 label1.Text = "nhap ma pin";
@@ -113,7 +120,7 @@ namespace GUI
 
         private void btnenter_Click(object sender, EventArgs e)
         {
-            if (bus.checkPIN(cardnumb, txtCardNo.Text))
+            if (bus.checkCard(cardnumb))
             {
                 label1.Text = "Đăng nhập thành công!";
             }
@@ -129,6 +136,7 @@ namespace GUI
             form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
             form.Show();
+            
         }
     }
 }
