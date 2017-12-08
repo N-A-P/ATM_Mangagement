@@ -22,7 +22,8 @@ namespace GUI
 
         BLL.BLL bus = new BLL.BLL();
         string cardnumb;
-
+        public int accID = 97041;
+        public string cardNo = "1234567890123";
         private void Form1_Load(object sender, EventArgs e)
         {
             this.IsMdiContainer = true;
@@ -129,6 +130,18 @@ namespace GUI
             form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
             form.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CheckBalance frCheckBalance = new CheckBalance();
+            SwitchScreen(frCheckBalance);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ViewHistory viewHis = new ViewHistory();
+            SwitchScreen(viewHis);
         }
     }
 }

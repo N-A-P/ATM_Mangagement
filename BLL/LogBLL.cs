@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using DAO;
 using System.Data;
 
 namespace BLL
@@ -14,6 +15,10 @@ namespace BLL
         public DataTable getLog(string cardNo)
         {
             return logDAL.getLogs(cardNo);
+        }
+
+        public void createLog(Log log) {
+            logDAL.CreateLog(log);
         }
     }
 }
