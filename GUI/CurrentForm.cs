@@ -14,6 +14,8 @@ namespace GUI
         public static string viewHistory= "history";
         public static string checkBalance= "balance";
         public static string welcomscr = "welcomescr";
+        public static string withdraw = "withdraw";
+
 
     }
 }

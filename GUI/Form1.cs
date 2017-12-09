@@ -42,6 +42,8 @@ namespace GUI
         WelcomeScreen welcomescr = new WelcomeScreen();
         Validationfrm validfrm = new Validationfrm();
         Functionfrm fuctionfrm = new Functionfrm();
+        ViewHistory viewHis = new ViewHistory();
+        CheckBalance frCheckBalance = new CheckBalance();
 
         private void btnNum1_Click(object sender, EventArgs e)
         {
@@ -178,6 +180,7 @@ namespace GUI
                 {
                     atemps++;
                     validfrm.setlbl("Bạn đã nhập sai mã PIN "+atemps+" lần, nhập sai 3 lần sẽ bị khóa thẻ");
+                    validfrm.setPIN("");
                 }
                 else
                 {
@@ -214,17 +217,7 @@ namespace GUI
                 btnInsertCard.Enabled = true;
             }
         }
-        private void button4_Click(object sender, EventArgs e)
-        {
-            CheckBalance frCheckBalance = new CheckBalance();
-            SwitchScreen(frCheckBalance);
-        }
-
-        public void button5_Click(object sender, EventArgs e)
-        {
-            ViewHistory viewHis = new ViewHistory();
-            SwitchScreen(viewHis);
-        }
+      
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -240,6 +233,25 @@ namespace GUI
         {
 
         }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (Form1.currentfunction == CurrentForm.function)
+            {
+
+                SwitchScreen(frCheckBalance);
+            }
+
+        }
+
+        public void button5_Click(object sender, EventArgs e)
+        {
+            if (Form1.currentfunction == CurrentForm.function)
+            {
+
+                SwitchScreen(viewHis);
+            }
+
+        }
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -248,7 +260,10 @@ namespace GUI
                 SwitchScreen(welcomescr);
                 btnInsertCard.Enabled = true;
             }
-           
+            if (Form1.currentfunction == CurrentForm.checkBalance|| Form1.currentfunction == CurrentForm.viewHistory)
+            {
+                SwitchScreen(fuctionfrm);
+            }
         }
     }
 }
