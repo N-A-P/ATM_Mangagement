@@ -24,8 +24,13 @@ namespace GUI
         }
 
         BLL.BLL bus = new BLL.BLL();
+<<<<<<< HEAD
         //Functionfrm fuctionfrm = new Functionfrm();
         Validationfrm validfrm = new Validationfrm();
+=======
+
+        string cardnumb;
+>>>>>>> 69387a89a00c5f43c99dc77222b67a4c3ffca418
         public int accID = 97041;
         public string cardNo = "1234567890123";
         private void Form1_Load(object sender, EventArgs e)
@@ -180,6 +185,10 @@ namespace GUI
            
 
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 69387a89a00c5f43c99dc77222b67a4c3ffca418
         private void button4_Click(object sender, EventArgs e)
         {
             CheckBalance frCheckBalance = new CheckBalance();
