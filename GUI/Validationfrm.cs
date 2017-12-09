@@ -21,11 +21,7 @@ namespace GUI
 
         private void Validationfrm_Load(object sender, EventArgs e)
         {
-            pnfailure.Height = this.Height;
-            pnfailure.Width = this.Width;
-            pnPIN.Width = this.Width;
-            pnPIN.Height = this.Height;
-            pnfailure.Visible = false;
+            
         }
         public string getPIN()
         {
@@ -38,8 +34,7 @@ namespace GUI
         public void InvalidCard()
         {
             pnPIN.Visible = false;
-            pnfailure.Visible = true;
-
+            pnfailure.Visible = true;      
         }
     }
 }
