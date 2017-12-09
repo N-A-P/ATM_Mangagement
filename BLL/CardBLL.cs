@@ -47,5 +47,9 @@ namespace BLL
             }
             return result;
         }
+
+        public void ChangePIN(string cardNo, string pin) {
+            cardDAL.ChangePIN(cardNo, pin);
+        }
     }
 }
