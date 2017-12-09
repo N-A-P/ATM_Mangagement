@@ -39,17 +39,18 @@
             this.dgvLichSu.Location = new System.Drawing.Point(12, 110);
             this.dgvLichSu.Name = "dgvLichSu";
             this.dgvLichSu.RowTemplate.Height = 33;
-            this.dgvLichSu.Size = new System.Drawing.Size(1832, 650);
+            this.dgvLichSu.Size = new System.Drawing.Size(1782, 650);
             this.dgvLichSu.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 44);
+            this.label1.Location = new System.Drawing.Point(735, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Lịch sử giao dịch ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ViewHistory
             // 

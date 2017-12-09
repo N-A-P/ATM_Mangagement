@@ -26,7 +26,7 @@ namespace GUI
         Validationfrm validfrm = new Validationfrm();
         public int accID = 97041;
         int atemps = 0;
-        public string cardNo;
+        public string cardNo = "1234567890123";
         private void Form1_Load(object sender, EventArgs e)
         {
             Form welcomescr = new Form();
@@ -183,10 +183,11 @@ namespace GUI
             SwitchScreen(frCheckBalance);
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        public void button5_Click(object sender, EventArgs e)
         {
             ViewHistory viewHis = new ViewHistory();
             SwitchScreen(viewHis);
         }
+
     }
 }
