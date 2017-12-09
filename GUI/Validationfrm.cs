@@ -17,6 +17,7 @@ namespace GUI
             InitializeComponent();
         }
         BLL.BLL bus = new BLL.BLL();
+        
 
         private void Validationfrm_Load(object sender, EventArgs e)
         {
@@ -25,7 +26,20 @@ namespace GUI
             pnPIN.Width = this.Width;
             pnPIN.Height = this.Height;
             pnfailure.Visible = false;
-            bool isCardValid = bus.checkCard("234");
+        }
+        public string getPIN()
+        {
+            return txtPIN.Text;
+        }
+        public void setlbl(string str)
+        {
+            label2.Text = str;
+        }
+        public void InvalidCard()
+        {
+            pnPIN.Visible = false;
+            pnfailure.Visible = true;
+
         }
     }
 }

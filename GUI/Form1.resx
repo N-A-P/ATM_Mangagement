@@ -370,7 +370,7 @@
     <value>6, 6, 6, 6</value>
   </data>
   <data name="btnenter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 44</value>
+    <value>75, 29</value>
   </data>
   <data name="btnenter.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -397,7 +397,7 @@
     <value>6, 6, 6, 6</value>
   </data>
   <data name="btnclear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 44</value>
+    <value>75, 29</value>
   </data>
   <data name="btnclear.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -424,7 +424,7 @@
     <value>6, 6, 6, 6</value>
   </data>
   <data name="btncancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 44</value>
+    <value>75, 29</value>
   </data>
   <data name="btncancel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -745,10 +745,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnInsertCard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 219</value>
-  </data>
-  <data name="btnInsertCard.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 6, 6, 6</value>
+    <value>75, 86</value>
   </data>
   <data name="btnInsertCard.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 110</value>
@@ -769,7 +766,7 @@
     <value>cardpanel</value>
   </data>
   <data name="&gt;&gt;btnInsertCard.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="cardpanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1604, 935</value>

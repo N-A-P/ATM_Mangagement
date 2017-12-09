@@ -17,20 +17,30 @@ namespace BLL
         public Boolean checkCard(string cardNo)
         {
             Boolean result = false;
-            if (cardNo.Length != 13)
-            {
-                return false;
-            }
+            //if (cardNo.Length != 13)
+            //{
+            //    return false;
+            //}
             card = cardDAL.getCardInfo(cardNo);
             if (card.CardNo != "")
             {
                 result = true;
             }
+            if (card.Status == "block")
+            {
+                return false;
+            }
             return result;
         }
 
-        public Boolean checkPIN(string cardNo, string PIN)
+        public Boolean checkPIN(string cardNo, string PIN, int atemps)
         {
+            if (atemps == 3)
+            {
+                cardDAL.DisableCard(cardNo);
+                return false;
+            }
+                
             Boolean result = false;
             card = cardDAL.getCardInfo(cardNo);
             if (card.PIN == PIN)

@@ -166,6 +166,7 @@
             resources.ApplyResources(this.btncancel, "btncancel");
             this.btncancel.Name = "btncancel";
             this.btncancel.UseVisualStyleBackColor = true;
+            this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
             // 
             // btnNum3
             // 
@@ -234,8 +235,6 @@
             // cardpanel
             // 
             this.cardpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.cardpanel.Controls.Add(this.label1);
-            this.cardpanel.Controls.Add(this.txtCardNo);
             this.cardpanel.Controls.Add(this.btnInsertCard);
             resources.ApplyResources(this.cardpanel, "cardpanel");
             this.cardpanel.Name = "cardpanel";
@@ -274,7 +273,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.keypad.ResumeLayout(false);
             this.cardpanel.ResumeLayout(false);
-            this.cardpanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -304,8 +302,6 @@
         private System.Windows.Forms.Button btnNum1;
         private System.Windows.Forms.Panel cardpanel;
         private System.Windows.Forms.Button btnInsertCard;
-        private System.Windows.Forms.TextBox txtCardNo;
-        private System.Windows.Forms.Label label1;
     }
 }
 
