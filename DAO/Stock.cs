@@ -8,25 +8,19 @@ namespace DAO
 {
     public class Stock
     {
-        private string _StockID;
+        private int _StockID;
 
-        public string StockID
+        public int StockID
         {
             get { return _StockID; }
             set { _StockID = value; }
         }
 
-        private string _MoneyID;
+        public Money Money { get; set; }
 
-        public string MoneyID
-        {
-            get { return _MoneyID; }
-            set { _MoneyID = value; }
-        }
+        private int _ATMID;
 
-        private string _ATMID;
-
-        public string ATMID
+        public int ATMID
         {
             get { return _ATMID; }
             set { _ATMID = value; }
@@ -40,10 +34,12 @@ namespace DAO
             set { _Quantity = value; }
         }
 
-        public Stock(string stockID, string moneyID, string atmID, int quantity)
+        public Stock() { }
+
+        public Stock(int stockID, Money money, int atmID, int quantity)
         {
             this._StockID = stockID;
-            this._MoneyID = moneyID;
+            this.Money = money;
             this._ATMID = atmID;
             this._Quantity = quantity;
         }
