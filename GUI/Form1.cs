@@ -18,9 +18,9 @@ namespace GUI
         public Form1()
         {
             InitializeComponent();
-            this.IsMdiContainer = true;
-           
+            this.IsMdiContainer = true;           
         }
+        AccountBLL accbll = new AccountBLL();
         public static string currentfunction;
         
         BLL.BLL bus = new BLL.BLL();     
@@ -36,20 +36,24 @@ namespace GUI
             welcomescr.Dock = DockStyle.Fill;
             screen.Controls.Add(welcomescr);
             welcomescr.Show();
-            
-
         }
-        WelcomeScreen welcomescr = new WelcomeScreen();
+
+
         Validationfrm validfrm = new Validationfrm();
-        Functionfrm fuctionfrm = new Functionfrm();
-        ViewHistory viewHis = new ViewHistory();
-        CheckBalance frCheckBalance = new CheckBalance();
+        ChangePINfrm changePINfrm = new ChangePINfrm();
+
+
 
         private void btnNum1_Click(object sender, EventArgs e)
         {
             if (Form1.currentfunction == CurrentForm.validation)
             {
                 validfrm.setPIN(validfrm.getPIN() + '1');
+            }
+
+            if (Form1.currentfunction == CurrentForm.changePIN)
+            {
+
             }
         }
 
@@ -59,10 +63,20 @@ namespace GUI
             {
                 validfrm.setPIN(validfrm.getPIN() + '2');
             }
+
+            if (Form1.currentfunction == CurrentForm.changePIN)
+            {
+
+            }
         }
 
         private void btnNum3_Click(object sender, EventArgs e)
         {
+            if (Form1.currentfunction == CurrentForm.changePIN)
+            {
+
+            }
+
             if (Form1.currentfunction == CurrentForm.validation)
             {
                 validfrm.setPIN(validfrm.getPIN() + '3');
@@ -71,6 +85,11 @@ namespace GUI
 
         private void btnNum4_Click(object sender, EventArgs e)
         {
+            if (Form1.currentfunction == CurrentForm.changePIN)
+            {
+
+            }
+
             if (Form1.currentfunction == CurrentForm.validation)
             {
                 validfrm.setPIN(validfrm.getPIN() + '4');
@@ -83,6 +102,11 @@ namespace GUI
             {
                 validfrm.setPIN(validfrm.getPIN() + '5');
             }
+
+            if (Form1.currentfunction == CurrentForm.changePIN)
+            {
+
+            }
         }
 
         private void btnNum6_Click(object sender, EventArgs e)
@@ -90,6 +114,11 @@ namespace GUI
             if (Form1.currentfunction == CurrentForm.validation)
             {
                 validfrm.setPIN(validfrm.getPIN() + '6');
+            }
+
+            if (Form1.currentfunction == CurrentForm.changePIN)
+            {
+
             }
         }
 
@@ -99,6 +128,11 @@ namespace GUI
             {
                 validfrm.setPIN(validfrm.getPIN() + '7');
             }
+
+            if (Form1.currentfunction == CurrentForm.changePIN)
+            {
+
+            }
         }
 
         private void btnNum8_Click(object sender, EventArgs e)
@@ -106,6 +140,11 @@ namespace GUI
             if (Form1.currentfunction == CurrentForm.validation)
             {
                 validfrm.setPIN(validfrm.getPIN() + '8');
+            }
+
+            if (Form1.currentfunction == CurrentForm.changePIN)
+            {
+
             }
         }
 
@@ -115,6 +154,11 @@ namespace GUI
             {
                 validfrm.setPIN(validfrm.getPIN() + '9');
             }
+
+            if (Form1.currentfunction == CurrentForm.changePIN)
+            {
+
+            }
         }
 
         private void btnNum0_Click(object sender, EventArgs e)
@@ -122,6 +166,11 @@ namespace GUI
             if (Form1.currentfunction == CurrentForm.validation)
             {
                 validfrm.setPIN(validfrm.getPIN() + '0');
+            }
+
+            if (Form1.currentfunction == CurrentForm.changePIN)
+            {
+
             }
         }
 
@@ -184,34 +233,53 @@ namespace GUI
                 }
                 else
                 {
-
+                    Functionfrm fuctionfrm = new Functionfrm();
                     SwitchScreen(fuctionfrm);
                     atemps = 0;
                 }
                 if (atemps > 2)
                 { 
                     MessageBox.Show("Thẻ của bạn bị khóa do nhập sai PIN quá nhiều lần. Hãy tới chi nhánh ngân hàng gần nhất để được giúp đỡ!");
+                    WelcomeScreen welcomescr = new WelcomeScreen();
                     SwitchScreen(welcomescr);
                     btnInsertCard.Enabled = true;
                 }
             }
+
+            if(Form1.currentfunction == CurrentForm.changePIN)
+            {
+                if (ChangePINfrm.currentfeild == 1)
+                {
+                    changePINfrm.setfocus(2);
+                }
+
+                if (ChangePINfrm.currentfeild == 2)
+                {
+                    changePINfrm.setfocus(3);
+                }
+
+                if (ChangePINfrm.currentfeild == 3)
+                {
+                    //
+                }
+            }
+
         }
 
         void SwitchScreen(Form form)
         {
-           
             screen.Controls.RemoveAt(0);
             form.MdiParent = this;
             screen.Controls.Add(form);
             form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
-            form.Show();
-            
+            form.Show();          
         }
         private void btncancel_Click(object sender, EventArgs e)
         {
             if (Form1.currentfunction == CurrentForm.validation)
             {
+                WelcomeScreen welcomescr = new WelcomeScreen();
                 SwitchScreen(welcomescr);
                 btnInsertCard.Enabled = true;
             }
@@ -220,7 +288,10 @@ namespace GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            if(Form1.currentfunction == CurrentForm.function)
+            {
+                SwitchScreen(changePINfrm);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -236,7 +307,7 @@ namespace GUI
         {
             if (Form1.currentfunction == CurrentForm.function)
             {
-
+                CheckBalance frCheckBalance = new CheckBalance();
                 SwitchScreen(frCheckBalance);
             }
 
@@ -246,23 +317,40 @@ namespace GUI
         {
             if (Form1.currentfunction == CurrentForm.function)
             {
-
+                ViewHistory viewHis = new ViewHistory();
                 SwitchScreen(viewHis);
             }
+            if(Form1.currentfunction == CurrentForm.changePIN)
+            {
+               
+                if (ChangePINfrm.confirm)
+                {
+                    // exe change PIN
+                    // goto function screen
+                }
+            }
+           
+
+
 
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if(Form1.currentfunction == CurrentForm.validation)
+            Functionfrm fuctionfrm = new Functionfrm();
+            if (Form1.currentfunction == CurrentForm.validation)
             {
+                WelcomeScreen welcomescr = new WelcomeScreen();
                 SwitchScreen(welcomescr);
                 btnInsertCard.Enabled = true;
             }
-            if (Form1.currentfunction == CurrentForm.checkBalance|| Form1.currentfunction == CurrentForm.viewHistory)
+            if (Form1.currentfunction == CurrentForm.checkBalance|| Form1.currentfunction == CurrentForm.viewHistory || Form1.currentfunction == CurrentForm.changePIN)
             {
+                
                 SwitchScreen(fuctionfrm);
             }
+          
+            
         }
     }
 }
