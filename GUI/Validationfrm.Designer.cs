@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.pnPIN = new System.Windows.Forms.Panel();
-            this.pnfailure = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtPIN = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pnfailure = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnPIN.SuspendLayout();
             this.pnfailure.SuspendLayout();
@@ -44,8 +44,25 @@
             this.pnPIN.Controls.Add(this.label2);
             this.pnPIN.Location = new System.Drawing.Point(252, 143);
             this.pnPIN.Name = "pnPIN";
-            this.pnPIN.Size = new System.Drawing.Size(374, 35);
+            this.pnPIN.Size = new System.Drawing.Size(438, 35);
             this.pnPIN.TabIndex = 0;
+            // 
+            // txtPIN
+            // 
+            this.txtPIN.Enabled = false;
+            this.txtPIN.Location = new System.Drawing.Point(296, 11);
+            this.txtPIN.Name = "txtPIN";
+            this.txtPIN.Size = new System.Drawing.Size(129, 20);
+            this.txtPIN.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nhập mã PIN:";
             // 
             // pnfailure
             // 
@@ -64,22 +81,6 @@
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thẻ không hợp lệ!";
-            // 
-            // txtPIN
-            // 
-            this.txtPIN.Location = new System.Drawing.Point(237, 11);
-            this.txtPIN.Name = "txtPIN";
-            this.txtPIN.Size = new System.Drawing.Size(129, 20);
-            this.txtPIN.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nhập mã PIN:";
             // 
             // label3
             // 

@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class ViewHistory
+    partial class WelcomeScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,44 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvLichSu = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLichSu)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvLichSu
-            // 
-            this.dgvLichSu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLichSu.Location = new System.Drawing.Point(11, 73);
-            this.dgvLichSu.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvLichSu.Name = "dgvLichSu";
-            this.dgvLichSu.RowTemplate.Height = 33;
-            this.dgvLichSu.Size = new System.Drawing.Size(879, 323);
-            this.dgvLichSu.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 58);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(265, 171);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Lịch sử giao dịch ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Size = new System.Drawing.Size(358, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Chào mừng bạn đến với hệ thống ATM, nhấn nút Insert Card để nhập thẻ.";
             // 
-            // ViewHistory
+            // WelcomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 407);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvLichSu);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "ViewHistory";
-            this.Text = "ViewHistory";
-            this.Load += new System.EventHandler(this.ViewHistory_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLichSu)).EndInit();
+            this.Name = "WelcomeScreen";
+            this.Text = "WelcomeScreen";
+            this.Load += new System.EventHandler(this.WelcomeScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -73,7 +56,6 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvLichSu;
         private System.Windows.Forms.Label label1;
     }
 }
