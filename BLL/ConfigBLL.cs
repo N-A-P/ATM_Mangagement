@@ -11,13 +11,13 @@ namespace BLL
     {
         ConfigDAL confDAL = new ConfigDAL();
 
-        public int getMinDraw(int id) {
-            Config config = confDAL.getConfig(id);
+        public int getMinDraw() {
+            Config config = confDAL.getConfig(ConfigATM.ConfigID);
             return config.MinWithdraw;
         }
 
-        public int getMaxDraw(int id) {
-            Config config = confDAL.getConfig(id);
+        public int getMaxDraw() {
+            Config config = confDAL.getConfig(ConfigATM.ConfigID);
             return config.MaxWithdraw;
         }
     }

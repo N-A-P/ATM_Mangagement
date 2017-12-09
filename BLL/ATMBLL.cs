@@ -11,9 +11,9 @@ namespace BLL
     class ATMBLL
     {
         ATMDAL atmDAL = new ATMDAL();
-        public ATM getInfoATM(int id)
+        public ATM getInfoATM()
         {
-            ATM atm = atmDAL.getATMInfo(id);
+            ATM atm = atmDAL.getATMInfo(ConfigATM.ATMID);
             return atm;
         }
     }
