@@ -13,12 +13,20 @@ namespace DAO
         public int MaxWithdraw { get; set; }
         public DateTime DateModified { get; set; }
 
+        public Config() { }
+
         public Config(int id, int min, int max, DateTime modified)
         {
             this.ConfigID = id;
             this.MinWithdraw = min;
             this.MaxWithdraw = max;
             this.DateModified = modified;
+        }
+
+        public Config(int id, int min, int max) {
+            this.ConfigID = id;
+            this.MinWithdraw = min;
+            this.MaxWithdraw = max;
         }
     }
 }

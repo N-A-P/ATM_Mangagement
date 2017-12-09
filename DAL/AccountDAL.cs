@@ -31,6 +31,27 @@ namespace DAL
             return acc;
         }
 
+        public int getBalance(int accountID)
+        {
+            int balance = 0;
+            ServiceManager.KetNoi();
+            String cmdString = @"SELECT Account.Balance
+            FROM (((Account acc
+            INNER JOIN Customer cust ON acc.CustID = cust.CustID)
+            INNER JOIN OverDraft oD ON acc.ODID = oD.ODID)
+            INNER JOIN WithdrawLimit wD ON acc.WDID = wD.WDID)
+            WHERE acc.AccountID = @accId ;";
+            SqlCommand cmd = new SqlCommand(cmdString, ServiceManager.conn);
+            cmd.Parameters.AddWithValue("accId", accountID);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                balance = (int)dr["Balance"];
+            }
+            ServiceManager.DongKetNoi();
+            return balance;
+        }
+
         public void updateBalance(int accID, int newBalance)
         {
             ServiceManager.KetNoi();

@@ -44,8 +44,10 @@
     <Compile Include="AccountBLL.cs" />
     <Compile Include="ATMBLL.cs" />
     <Compile Include="CardBLL.cs" />
+    <Compile Include="ConfigBLL.cs" />
     <Compile Include="LogBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransferBLL.cs" />
     <Compile Include="WithDrawBLL.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -58,5 +58,31 @@ namespace DAL
             ServiceManager.DongKetNoi();
             return dt;
         }
+
+        public int getAmout(string cardNo) {
+            string currDate = DateTime.Now.ToString("yyyy-MM-dd");
+            int amount = 0;
+            ServiceManager.KetNoi();
+            String cmdString =
+            @"SELECT Log.Amount
+            FROM ((LOG log
+            INNER JOIN ATM atm ON log.ATMID = atm.ATMID)
+            INNER JOIN LogType lt ON log.LogTypeID = lt.LogTypeID)
+            WHERE log.CardNo = @cardNo AND log.LogDate = @logDate;";
+
+            SqlCommand cmd = new SqlCommand(cmdString, ServiceManager.conn);
+
+            cmd.Parameters.AddWithValue("cardNo", cardNo);
+            cmd.Parameters.AddWithValue("logDate", currDate);
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read()) { 
+                int am = (int)dr["Amount"];
+                amount = amount + am;
+            }
+            ServiceManager.DongKetNoi();
+            return amount;
+        }
     }
 }
