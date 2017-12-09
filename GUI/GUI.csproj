@@ -86,6 +86,12 @@
     <Compile Include="WelcomeScreen.Designer.cs">
       <DependentUpon>WelcomeScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="WithDraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithDraw.Designer.cs">
+      <DependentUpon>WithDraw.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CheckBalance.resx">
       <DependentUpon>CheckBalance.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WithDraw.resx">
+      <DependentUpon>WithDraw.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
