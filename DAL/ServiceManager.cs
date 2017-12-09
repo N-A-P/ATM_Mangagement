@@ -13,7 +13,7 @@ namespace DAL
     {
         public static SqlConnection conn  = null;
         public static void KetNoi() {
-            String connString = ConfigurationManager.ConnectionStrings["ATM2"].ToString();
+            String connString = ConfigurationManager.ConnectionStrings["ATM"].ToString();
             conn = new SqlConnection(connString);
             conn.Open();
         }

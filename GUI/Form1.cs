@@ -19,20 +19,14 @@ namespace GUI
         {
             InitializeComponent();
             this.IsMdiContainer = true;
-            
-
         }
 
         BLL.BLL bus = new BLL.BLL();
-<<<<<<< HEAD
-        //Functionfrm fuctionfrm = new Functionfrm();
+        Functionfrm fuctionfrm = new Functionfrm();
         Validationfrm validfrm = new Validationfrm();
-=======
-
-        string cardnumb;
->>>>>>> 69387a89a00c5f43c99dc77222b67a4c3ffca418
         public int accID = 97041;
-        public string cardNo = "1234567890123";
+        int atemps = 0;
+        public string cardNo;
         private void Form1_Load(object sender, EventArgs e)
         {
             Form welcomescr = new Form();
@@ -112,8 +106,8 @@ namespace GUI
 
         private void btnInsertCard_Click(object sender, EventArgs e)
         {
-            cardnumb = ShowDialog("Nhập mã thẻ", "Input form");
-            if (bus.checkCard(cardnumb))
+            cardNo = ShowDialog("Nhập mã thẻ", "Input form");
+            if (bus.checkCard(cardNo))
             {
                 
                 SwitchScreen(validfrm);
@@ -152,7 +146,7 @@ namespace GUI
         {
            
 
-            bool check = bus.checkPIN(cardnumb, validfrm.getPIN(), atemps);
+            bool check = bus.checkPIN(cardNo, validfrm.getPIN(), atemps);
             if (!check)
             {
                 atemps++;
@@ -160,8 +154,8 @@ namespace GUI
             }
             else
             {
-
-                //SwitchScreen(fuctionfrm);
+                SwitchScreen(fuctionfrm);
+                atemps = 0;
             }
             if (atemps > 2)
             {
@@ -179,16 +173,10 @@ namespace GUI
             form.Show();
             
         }
-        int atemps = 0;
         private void btncancel_Click(object sender, EventArgs e)
-        {
-           
+        {        
 
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 69387a89a00c5f43c99dc77222b67a4c3ffca418
         private void button4_Click(object sender, EventArgs e)
         {
             CheckBalance frCheckBalance = new CheckBalance();
