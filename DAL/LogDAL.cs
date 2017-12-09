@@ -33,7 +33,11 @@ namespace DAL
         public DataTable getLogs(string cardNo) {
             ServiceManager.KetNoi();
             String cmdString =
-                            @"SELECT * FROM LOG WHERE CardNo = @cardNo";
+            @"SELECT Log.LogID, Log.LogDate, Log.Amount, Log.Details, ATM.Branch, ATM.Address, Log.CardNo, Log.ToCard 
+            FROM ((LOG log
+            INNER JOIN ATM atm ON log.ATMID = atm.ATMID)
+            INNER JOIN LogType lt ON log.LogTypeID = lt.LogTypeID)
+            WHERE log.CardNo = @cardNo ;";
             SqlCommand cmd = new SqlCommand(cmdString, ServiceManager.conn);
             cmd.Parameters.AddWithValue("cardNo", cardNo);
             DataTable dt = new DataTable();

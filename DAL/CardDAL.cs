@@ -22,7 +22,7 @@ namespace DAL
             while (dr.Read()) {
                 string no               = dr["CardNo"].ToString();
                 string pin              = dr["PIN"].ToString();
-                string status           = dr["Status"].ToString();
+                int status              = (int)dr["Status"];
                 DateTime startDate      = (DateTime)dr["StartDate"];
                 DateTime expiredDate    = (DateTime)dr["ExpiredDate"];
                 int accID               = (int)dr["AccountID"];
@@ -37,7 +37,7 @@ namespace DAL
             string cmdString = "update Card set Status=@disable where CardNo = @cardNo";
             SqlCommand cmd = new SqlCommand(cmdString, ServiceManager.conn);
             cmd.Parameters.AddWithValue("cardNo", cardNo);
-            cmd.Parameters.AddWithValue("disable", "block");
+            cmd.Parameters.AddWithValue("disable", 0);
             cmd.ExecuteNonQuery();
             ServiceManager.DongKetNoi();
         }

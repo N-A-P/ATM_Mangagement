@@ -35,28 +35,31 @@
             // lblBalance
             // 
             this.lblBalance.AutoSize = true;
-            this.lblBalance.Location = new System.Drawing.Point(405, 176);
+            this.lblBalance.Location = new System.Drawing.Point(366, 177);
+            this.lblBalance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(70, 25);
+            this.lblBalance.Size = new System.Drawing.Size(35, 13);
             this.lblBalance.TabIndex = 0;
             this.lblBalance.Text = "label1";
             // 
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(405, 111);
+            this.lblDesc.Location = new System.Drawing.Point(366, 143);
+            this.lblDesc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(323, 25);
+            this.lblDesc.Size = new System.Drawing.Size(162, 13);
             this.lblDesc.TabIndex = 1;
             this.lblDesc.Text = "Số dư trong tài khoản của bạn là";
             // 
             // CheckBalance
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 375);
+            this.ClientSize = new System.Drawing.Size(901, 407);
             this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.lblBalance);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CheckBalance";
             this.Load += new System.EventHandler(this.CheckBalance_Load);
             this.ResumeLayout(false);

@@ -36,28 +36,31 @@
             // dgvLichSu
             // 
             this.dgvLichSu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLichSu.Location = new System.Drawing.Point(12, 110);
+            this.dgvLichSu.Location = new System.Drawing.Point(6, 84);
+            this.dgvLichSu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvLichSu.Name = "dgvLichSu";
             this.dgvLichSu.RowTemplate.Height = 33;
-            this.dgvLichSu.Size = new System.Drawing.Size(1832, 650);
+            this.dgvLichSu.Size = new System.Drawing.Size(1782, 650);
             this.dgvLichSu.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 25);
+            this.label1.Location = new System.Drawing.Point(3, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Lịch sử giao dịch ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ViewHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1806, 785);
+            this.ClientSize = new System.Drawing.Size(901, 407);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvLichSu);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ViewHistory";
             this.Text = "ViewHistory";
             this.Load += new System.EventHandler(this.ViewHistory_Load);
