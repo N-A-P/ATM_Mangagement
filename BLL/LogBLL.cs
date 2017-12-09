@@ -20,5 +20,9 @@ namespace BLL
         public void createLog(Log log) {
             logDAL.CreateLog(log);
         }
+
+        public int getAmount(string cardNo) {
+            return logDAL.getAmout(cardNo);
+        }
     }
 }
