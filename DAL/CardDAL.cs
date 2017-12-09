@@ -41,5 +41,15 @@ namespace DAL
             cmd.ExecuteNonQuery();
             ServiceManager.DongKetNoi();
         }
+
+        public void ChangePIN(string cardNo, string pin) {
+            ServiceManager.KetNoi();
+            string cmdString = "Update Card set PIN=@pin Where CardNo = @cardNo";
+            SqlCommand cmd = new SqlCommand(cmdString, ServiceManager.conn);
+            cmd.Parameters.AddWithValue("cardNo", cardNo);
+            cmd.Parameters.AddWithValue("pin", pin);
+            cmd.ExecuteNonQuery();
+            ServiceManager.DongKetNoi();
+        }
     }
 }
