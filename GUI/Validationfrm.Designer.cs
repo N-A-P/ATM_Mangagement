@@ -39,16 +39,17 @@
             // 
             // pnPIN
             // 
+            this.pnPIN.Controls.Add(this.pnfailure);
             this.pnPIN.Controls.Add(this.txtPIN);
             this.pnPIN.Controls.Add(this.label2);
             this.pnPIN.Location = new System.Drawing.Point(182, 95);
             this.pnPIN.Name = "pnPIN";
-            this.pnPIN.Size = new System.Drawing.Size(335, 145);
+            this.pnPIN.Size = new System.Drawing.Size(374, 145);
             this.pnPIN.TabIndex = 0;
             // 
             // txtPIN
             // 
-            this.txtPIN.Location = new System.Drawing.Point(179, 57);
+            this.txtPIN.Location = new System.Drawing.Point(242, 57);
             this.txtPIN.Name = "txtPIN";
             this.txtPIN.Size = new System.Drawing.Size(129, 20);
             this.txtPIN.TabIndex = 1;
@@ -65,7 +66,7 @@
             // pnfailure
             // 
             this.pnfailure.Controls.Add(this.label1);
-            this.pnfailure.Location = new System.Drawing.Point(579, 128);
+            this.pnfailure.Location = new System.Drawing.Point(87, 17);
             this.pnfailure.Name = "pnfailure";
             this.pnfailure.Size = new System.Drawing.Size(202, 112);
             this.pnfailure.TabIndex = 1;
@@ -84,7 +85,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(828, 390);
-            this.Controls.Add(this.pnfailure);
             this.Controls.Add(this.pnPIN);
             this.Name = "Validationfrm";
             this.Text = "Validation";
