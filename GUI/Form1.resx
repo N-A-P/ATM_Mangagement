@@ -370,7 +370,15 @@
     <value>6, 6, 6, 6</value>
   </data>
   <data name="btnenter.Size" type="System.Drawing.Size, System.Drawing">
+<<<<<<< HEAD
+<<<<<<< HEAD
     <value>75, 29</value>
+=======
+    <value>150, 44</value>
+>>>>>>> b586ee85f3e352f0c805f30e49654782412ca03d
+=======
+    <value>75, 29</value>
+>>>>>>> 69387a89a00c5f43c99dc77222b67a4c3ffca418
   </data>
   <data name="btnenter.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -397,7 +405,15 @@
     <value>6, 6, 6, 6</value>
   </data>
   <data name="btnclear.Size" type="System.Drawing.Size, System.Drawing">
+<<<<<<< HEAD
+<<<<<<< HEAD
     <value>75, 29</value>
+=======
+    <value>150, 44</value>
+>>>>>>> b586ee85f3e352f0c805f30e49654782412ca03d
+=======
+    <value>75, 29</value>
+>>>>>>> 69387a89a00c5f43c99dc77222b67a4c3ffca418
   </data>
   <data name="btnclear.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -424,7 +440,15 @@
     <value>6, 6, 6, 6</value>
   </data>
   <data name="btncancel.Size" type="System.Drawing.Size, System.Drawing">
+<<<<<<< HEAD
+<<<<<<< HEAD
     <value>75, 29</value>
+=======
+    <value>150, 44</value>
+>>>>>>> b586ee85f3e352f0c805f30e49654782412ca03d
+=======
+    <value>75, 29</value>
+>>>>>>> 69387a89a00c5f43c99dc77222b67a4c3ffca418
   </data>
   <data name="btncancel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -663,6 +687,11 @@
   <data name="&gt;&gt;btnNum1.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 69387a89a00c5f43c99dc77222b67a4c3ffca418
   <data name="keypad.Location" type="System.Drawing.Point, System.Drawing">
     <value>858, 935</value>
   </data>
@@ -738,6 +767,10 @@
   <data name="&gt;&gt;txtCardNo.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+<<<<<<< HEAD
+>>>>>>> b586ee85f3e352f0c805f30e49654782412ca03d
+=======
+>>>>>>> 69387a89a00c5f43c99dc77222b67a4c3ffca418
   <data name="btnInsertCard.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 8.25pt, style=Bold</value>
   </data>
@@ -745,7 +778,18 @@
     <value>NoControl</value>
   </data>
   <data name="btnInsertCard.Location" type="System.Drawing.Point, System.Drawing">
+<<<<<<< HEAD
+<<<<<<< HEAD
     <value>75, 86</value>
+=======
+    <value>146, 219</value>
+  </data>
+  <data name="btnInsertCard.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+>>>>>>> b586ee85f3e352f0c805f30e49654782412ca03d
+=======
+    <value>75, 86</value>
+>>>>>>> 69387a89a00c5f43c99dc77222b67a4c3ffca418
   </data>
   <data name="btnInsertCard.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 110</value>
