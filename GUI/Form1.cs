@@ -175,10 +175,10 @@ namespace GUI
         {
             if (Form1.currentfunction == CurrentForm.validation)
             {
-                bool check = bus.checkPIN(cardNo, validfrm.getPIN());
+                atemps++;
+                bool check = bus.checkPIN(cardNo, validfrm.getPIN(),atemps);
                 if (!check)
                 {
-                    atemps++;
                     validfrm.setlbl("Bạn đã nhập sai mã PIN "+atemps+" lần, nhập sai 3 lần sẽ bị khóa thẻ");
                     validfrm.setPIN("");
                 }
@@ -189,8 +189,7 @@ namespace GUI
                     atemps = 0;
                 }
                 if (atemps > 2)
-                {
-                    bus.disableCard(cardNo);   
+                { 
                     MessageBox.Show("Thẻ của bạn bị khóa do nhập sai PIN quá nhiều lần. Hãy tới chi nhánh ngân hàng gần nhất để được giúp đỡ!");
                     SwitchScreen(welcomescr);
                     btnInsertCard.Enabled = true;

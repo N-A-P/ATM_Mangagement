@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CashTransferFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashTransferFrm.Designer.cs">
+      <DependentUpon>CashTransferFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePINfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePINfrm.Designer.cs">
+      <DependentUpon>ChangePINfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CheckBalance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +104,12 @@
     <Compile Include="WithDraw.Designer.cs">
       <DependentUpon>WithDraw.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CashTransferFrm.resx">
+      <DependentUpon>CashTransferFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePINfrm.resx">
+      <DependentUpon>ChangePINfrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CheckBalance.resx">
       <DependentUpon>CheckBalance.cs</DependentUpon>
     </EmbeddedResource>
