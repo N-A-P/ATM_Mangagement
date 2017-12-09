@@ -16,5 +16,11 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void ChangePINfrm_Load(object sender, EventArgs e)
+        {
+            Form1.currentfunction = CurrentForm.changePIN;
+            
+        }
     }
 }
