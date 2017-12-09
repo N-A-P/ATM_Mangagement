@@ -26,7 +26,7 @@ namespace BLL
             {
                 result = true;
             }
-            if (card.Status == "block")
+            if (card.Status == 0)
             {
                 return false;
             }
@@ -35,7 +35,7 @@ namespace BLL
 
         public Boolean checkPIN(string cardNo, string PIN, int atemps)
         {
-            if (atemps == 3)
+            if (atemps > 2)
             {
                 cardDAL.DisableCard(cardNo);
                 return false;

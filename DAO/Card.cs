@@ -10,7 +10,7 @@ namespace DAO
     {
 
         public string CardNo { get; set; }
-        public string Status { get; set; }
+        public int Status { get; set; }
         public int AccountID { get; set; }
         public string PIN { get; set; }
         public DateTime StartDate { get; set; }
@@ -22,7 +22,7 @@ namespace DAO
             this.Attempt = 3;
         }
 
-        public Card(string cardNo, string status, int accId, string Pin, DateTime startDate, DateTime expriredDate)
+        public Card(string cardNo, int status, int accId, string Pin, DateTime startDate, DateTime expriredDate)
         {
             this.CardNo = cardNo;
             this.Status = status;
