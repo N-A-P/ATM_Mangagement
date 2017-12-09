@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class Functionfrm : Form
+    public partial class WelcomeScreen : Form
     {
-        public Functionfrm()
+        public WelcomeScreen()
         {
             InitializeComponent();
         }
 
-        private void Functionfrm_Load(object sender, EventArgs e)
+        private void WelcomeScreen_Load(object sender, EventArgs e)
         {
-            Form1.currentfunction = CurrentForm.function;
+            Form1.currentfunction = CurrentForm.welcomscr;
         }
     }
 }

@@ -19,97 +19,125 @@ namespace GUI
         {
             InitializeComponent();
             this.IsMdiContainer = true;
+           
         }
-
-        BLL.BLL bus = new BLL.BLL();
-        Functionfrm fuctionfrm = new Functionfrm();
-        Validationfrm validfrm = new Validationfrm();
+        public static string currentfunction;
+        
+        BLL.BLL bus = new BLL.BLL();     
         public int accID = 97041;
         int atemps = 0;
-        public string cardNo = "1234567890123";
+        public string cardNo;
+        
         private void Form1_Load(object sender, EventArgs e)
         {
-            Form welcomescr = new Form();
-
+            WelcomeScreen welcomescr = new WelcomeScreen();
             welcomescr.MdiParent = this;
             welcomescr.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             welcomescr.Dock = DockStyle.Fill;
-            Label lbl = new Label();
-            lbl.Text = "Welcome to our bank's ATM system, please insert your ATM card";
-            lbl.AutoSize = true;
-            lbl.Location = new Point((screen.Width / 2) - 158, screen.Height / 2);
-            welcomescr.Controls.Add(lbl);
             screen.Controls.Add(welcomescr);
             welcomescr.Show();
-        }
+            
 
-        private void button17_Click(object sender, EventArgs e)
-        {
-            cardpanel.Visible = !cardpanel.Visible;
         }
+        WelcomeScreen welcomescr = new WelcomeScreen();
+        Validationfrm validfrm = new Validationfrm();
+        Functionfrm fuctionfrm = new Functionfrm();
 
         private void btnNum1_Click(object sender, EventArgs e)
         {
-            
+            if (Form1.currentfunction == CurrentForm.validation)
+            {
+                validfrm.setPIN(validfrm.getPIN() + '1');
+            }
         }
 
         private void btnNum2_Click(object sender, EventArgs e)
         {
-            
+            if (Form1.currentfunction == CurrentForm.validation)
+            {
+                validfrm.setPIN(validfrm.getPIN() + '2');
+            }
         }
 
         private void btnNum3_Click(object sender, EventArgs e)
         {
-            
+            if (Form1.currentfunction == CurrentForm.validation)
+            {
+                validfrm.setPIN(validfrm.getPIN() + '3');
+            }
         }
 
         private void btnNum4_Click(object sender, EventArgs e)
         {
-           
+            if (Form1.currentfunction == CurrentForm.validation)
+            {
+                validfrm.setPIN(validfrm.getPIN() + '4');
+            }
         }
 
         private void btnNum5_Click(object sender, EventArgs e)
         {
-           
+            if (Form1.currentfunction == CurrentForm.validation)
+            {
+                validfrm.setPIN(validfrm.getPIN() + '5');
+            }
         }
 
         private void btnNum6_Click(object sender, EventArgs e)
         {
-           
+            if (Form1.currentfunction == CurrentForm.validation)
+            {
+                validfrm.setPIN(validfrm.getPIN() + '6');
+            }
         }
 
         private void btnNum7_Click(object sender, EventArgs e)
         {
-            
+            if (Form1.currentfunction == CurrentForm.validation)
+            {
+                validfrm.setPIN(validfrm.getPIN() + '7');
+            }
         }
 
         private void btnNum8_Click(object sender, EventArgs e)
         {
-            
+            if (Form1.currentfunction == CurrentForm.validation)
+            {
+                validfrm.setPIN(validfrm.getPIN() + '8');
+            }
         }
 
         private void btnNum9_Click(object sender, EventArgs e)
         {
-            
+            if (Form1.currentfunction == CurrentForm.validation)
+            {
+                validfrm.setPIN(validfrm.getPIN() + '9');
+            }
         }
 
         private void btnNum0_Click(object sender, EventArgs e)
         {
-          
+            if (Form1.currentfunction == CurrentForm.validation)
+            {
+                validfrm.setPIN(validfrm.getPIN() + '0');
+            }
         }
 
         private void btnclear_Click(object sender, EventArgs e)
         {
             
-            
+            if(Form1.currentfunction == CurrentForm.validation)
+            {
+                validfrm.setPIN("");
+            }
         }
 
         private void btnInsertCard_Click(object sender, EventArgs e)
         {
+            
             cardNo = ShowDialog("Nhập mã thẻ", "Input form");
             if (bus.checkCard(cardNo))
             {
-                
                 SwitchScreen(validfrm);
                 btnInsertCard.Enabled = false;
             }
@@ -137,34 +165,39 @@ namespace GUI
             prompt.Controls.Add(confirmation);
             prompt.Controls.Add(textLabel);
             prompt.AcceptButton = confirmation;
-
             return prompt.ShowDialog() == DialogResult.OK ? textBox.Text : "";
         }
 
 
         private void btnenter_Click(object sender, EventArgs e)
         {
-           
+            if (Form1.currentfunction == CurrentForm.validation)
+            {
+                bool check = bus.checkPIN(cardNo, validfrm.getPIN());
+                if (!check)
+                {
+                    atemps++;
+                    validfrm.setlbl("Bạn đã nhập sai mã PIN "+atemps+" lần, nhập sai 3 lần sẽ bị khóa thẻ");
+                }
+                else
+                {
 
-            bool check = bus.checkPIN(cardNo, validfrm.getPIN(), atemps);
-            if (!check)
-            {
-                atemps++;
-                validfrm.setlbl("Bạn đã nhập sai mã Pin, hãy nhập lại");
-            }
-            else
-            {
-                SwitchScreen(fuctionfrm);
-                atemps = 0;
-            }
-            if (atemps > 2)
-            {
-                MessageBox.Show("Thẻ của bạn bị khóa do nhập sai PIN quá nhiều lần. Hãy tới chi nhánh ngân hàng gần nhất để được giúp đỡ!");
+                    SwitchScreen(fuctionfrm);
+                    atemps = 0;
+                }
+                if (atemps > 2)
+                {
+                    bus.disableCard(cardNo);   
+                    MessageBox.Show("Thẻ của bạn bị khóa do nhập sai PIN quá nhiều lần. Hãy tới chi nhánh ngân hàng gần nhất để được giúp đỡ!");
+                    SwitchScreen(welcomescr);
+                    btnInsertCard.Enabled = true;
+                }
             }
         }
 
         void SwitchScreen(Form form)
         {
+           
             screen.Controls.RemoveAt(0);
             form.MdiParent = this;
             screen.Controls.Add(form);
@@ -174,8 +207,12 @@ namespace GUI
             
         }
         private void btncancel_Click(object sender, EventArgs e)
-        {        
-
+        {
+            if (Form1.currentfunction == CurrentForm.validation)
+            {
+                SwitchScreen(welcomescr);
+                btnInsertCard.Enabled = true;
+            }
         }
         private void button4_Click(object sender, EventArgs e)
         {
@@ -189,5 +226,29 @@ namespace GUI
             SwitchScreen(viewHis);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if(Form1.currentfunction == CurrentForm.validation)
+            {
+                SwitchScreen(welcomescr);
+                btnInsertCard.Enabled = true;
+            }
+           
+        }
     }
 }
