@@ -19,16 +19,19 @@ namespace GUI
         {
             InitializeComponent();
             this.IsMdiContainer = true;
+            
+
         }
 
         BLL.BLL bus = new BLL.BLL();
         public string cardnumb;
-        Form welcomescr = new Form();
+        //Functionfrm fuctionfrm = new Functionfrm();
+       
         
-
+        Validationfrm validfrm = new Validationfrm();
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Form welcomescr = new Form();
 
             welcomescr.MdiParent = this;
             welcomescr.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -36,8 +39,7 @@ namespace GUI
             Label lbl = new Label();
             lbl.Text = "Welcome to our bank's ATM system, please insert your ATM card";
             lbl.AutoSize = true;
-            lbl.Location = new Point((screen.Width / 2) - 158 ,screen.Height/2);
-            label1.Text = (screen.Width / 2).ToString();
+            lbl.Location = new Point((screen.Width / 2) - 158, screen.Height / 2);
             welcomescr.Controls.Add(lbl);
             screen.Controls.Add(welcomescr);
             welcomescr.Show();
@@ -50,82 +52,117 @@ namespace GUI
 
         private void btnNum1_Click(object sender, EventArgs e)
         {
-            txtCardNo.Text = txtCardNo.Text + '1';
+            
         }
 
         private void btnNum2_Click(object sender, EventArgs e)
         {
-            txtCardNo.Text = txtCardNo.Text + '2';
+            
         }
 
         private void btnNum3_Click(object sender, EventArgs e)
         {
-            txtCardNo.Text = txtCardNo.Text + '3';
+            
         }
 
         private void btnNum4_Click(object sender, EventArgs e)
         {
-            txtCardNo.Text = txtCardNo.Text + '4';
+           
         }
 
         private void btnNum5_Click(object sender, EventArgs e)
         {
-            txtCardNo.Text = txtCardNo.Text + '5';
+           
         }
 
         private void btnNum6_Click(object sender, EventArgs e)
         {
-            txtCardNo.Text = txtCardNo.Text + '6';
+           
         }
 
         private void btnNum7_Click(object sender, EventArgs e)
         {
-            txtCardNo.Text = txtCardNo.Text + '7';
+            
         }
 
         private void btnNum8_Click(object sender, EventArgs e)
         {
-            txtCardNo.Text = txtCardNo.Text + '8';
+            
         }
 
         private void btnNum9_Click(object sender, EventArgs e)
         {
-            txtCardNo.Text = txtCardNo.Text + '9';
+            
         }
 
         private void btnNum0_Click(object sender, EventArgs e)
         {
-            txtCardNo.Text = txtCardNo.Text + '0';
+          
         }
 
         private void btnclear_Click(object sender, EventArgs e)
         {
-            txtCardNo.Text = "";
-            SwitchScreen(this.MdiChildren[0]);
+            
+            
         }
 
         private void btnInsertCard_Click(object sender, EventArgs e)
         {
-            
-            Validationfrm form = new Validationfrm();
-            SwitchScreen(form);
-            if (bus.checkCard(txtCardNo.Text) == true)
+            cardnumb = ShowDialog("Nhập mã thẻ", "Input form");
+            if (bus.checkCard(cardnumb))
             {
-                label1.Text = "nhap ma pin";
-                cardnumb = txtCardNo.Text;
+                
+                SwitchScreen(validfrm);
+                btnInsertCard.Enabled = false;
             }
             else
-                label1.Text = "the khong hop le:";               
+            {
+                validfrm.InvalidCard();
+                SwitchScreen(validfrm);
+            }
         }
+        public static string ShowDialog(string text, string caption)
+        {
+            Form prompt = new Form()
+            {
+                Width = 500,
+                Height = 150,
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                Text = caption,
+                StartPosition = FormStartPosition.CenterScreen
+            };
+            Label textLabel = new Label() { Left = 50, Top = 20, Text = text };
+            TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 400 };
+            Button confirmation = new Button() { Text = "Ok", Left = 350, Width = 100, Top = 70, DialogResult = DialogResult.OK };
+            confirmation.Click += (sender, e) => { prompt.Close(); };
+            prompt.Controls.Add(textBox);
+            prompt.Controls.Add(confirmation);
+            prompt.Controls.Add(textLabel);
+            prompt.AcceptButton = confirmation;
+
+            return prompt.ShowDialog() == DialogResult.OK ? textBox.Text : "";
+        }
+
 
         private void btnenter_Click(object sender, EventArgs e)
         {
-            if (bus.checkCard(cardnumb))
+           
+
+            bool check = bus.checkPIN(cardnumb, validfrm.getPIN(), atemps);
+            if (!check)
             {
-                label1.Text = "Đăng nhập thành công!";
+                atemps++;
+                validfrm.setlbl("Bạn đã nhập sai mã Pin, hãy nhập lại");
             }
             else
-                label1.Text = "failed";
+            {
+
+                //SwitchScreen(fuctionfrm);
+            }
+            if (atemps > 2)
+            {
+                MessageBox.Show("Thẻ của bạn bị khóa do nhập sai PIN quá nhiều lần. Hãy tới chi nhánh ngân hàng gần nhất để được giúp đỡ!");
+            }
         }
 
         void SwitchScreen(Form form)
@@ -138,5 +175,12 @@ namespace GUI
             form.Show();
             
         }
+        int atemps = 0;
+        private void btncancel_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+      
     }
 }

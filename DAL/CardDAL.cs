@@ -31,5 +31,15 @@ namespace DAL
             ServiceManager.DongKetNoi();
             return card;
         }
+        public void DisableCard(string cardNo)
+        {
+            ServiceManager.KetNoi();
+            string cmdString = "update Card set Status=@disable where CardNo = @cardNo";
+            SqlCommand cmd = new SqlCommand(cmdString, ServiceManager.conn);
+            cmd.Parameters.AddWithValue("cardNo", cardNo);
+            cmd.Parameters.AddWithValue("disable", "block");
+            cmd.ExecuteNonQuery();
+            ServiceManager.DongKetNoi();
+        }
     }
 }

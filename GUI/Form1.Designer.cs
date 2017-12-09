@@ -51,8 +51,6 @@
             this.btnNum2 = new System.Windows.Forms.Button();
             this.btnNum1 = new System.Windows.Forms.Button();
             this.cardpanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCardNo = new System.Windows.Forms.TextBox();
             this.btnInsertCard = new System.Windows.Forms.Button();
             this.keypad.SuspendLayout();
             this.cardpanel.SuspendLayout();
@@ -164,6 +162,7 @@
             resources.ApplyResources(this.btncancel, "btncancel");
             this.btncancel.Name = "btncancel";
             this.btncancel.UseVisualStyleBackColor = true;
+            this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
             // 
             // btnNum3
             // 
@@ -232,21 +231,9 @@
             // cardpanel
             // 
             this.cardpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.cardpanel.Controls.Add(this.label1);
-            this.cardpanel.Controls.Add(this.txtCardNo);
             this.cardpanel.Controls.Add(this.btnInsertCard);
             resources.ApplyResources(this.cardpanel, "cardpanel");
             this.cardpanel.Name = "cardpanel";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // txtCardNo
-            // 
-            resources.ApplyResources(this.txtCardNo, "txtCardNo");
-            this.txtCardNo.Name = "txtCardNo";
             // 
             // btnInsertCard
             // 
@@ -272,7 +259,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.keypad.ResumeLayout(false);
             this.cardpanel.ResumeLayout(false);
-            this.cardpanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -302,8 +288,6 @@
         private System.Windows.Forms.Button btnNum1;
         private System.Windows.Forms.Panel cardpanel;
         private System.Windows.Forms.Button btnInsertCard;
-        private System.Windows.Forms.TextBox txtCardNo;
-        private System.Windows.Forms.Label label1;
     }
 }
 
