@@ -34,15 +34,12 @@ namespace DAO
 
         public Account(SqlDataReader dr)
         {
-            while (dr.Read())
-            {
                 this.AccountID = (int)dr["AccountID"];
                 this.Balance = (int)dr["Balance"];
                 this.AccountNo = dr["AccountNo"].ToString();
                 this.Customer = new Customer(dr);
                 this.OverDraft = new OverDraftLimit(dr);
                 this.WithDraw = new WithDrawLimit(dr);
-            }
         }
     }
 }
