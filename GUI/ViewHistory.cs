@@ -16,12 +16,11 @@ namespace GUI
         {
             InitializeComponent();
         }
-        
+        LogBLL logBLL = new LogBLL();
+        Form1 fr1 = new Form1();
         private void ViewHistory_Load(object sender, EventArgs e)
         {
             Form1.currentfunction = CurrentForm.viewHistory;
-            LogBLL logBLL = new LogBLL();
-            Form1 fr1 = new Form1();
             dgvLichSu.DataSource = logBLL.getLog(fr1.cardNo);
             DataTable dt = logBLL.getLog(fr1.cardNo);
             configHienThi();
