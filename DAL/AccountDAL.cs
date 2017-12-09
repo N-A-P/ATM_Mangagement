@@ -19,7 +19,7 @@ namespace DAL
             FROM (((Account acc
             INNER JOIN Customer cust ON acc.CustID = cust.CustID)
             INNER JOIN OverDraft oD ON acc.ODID = oD.ODID)
-            INNER JOIN WithdrawLimit wD ON acc.WDID = wD.WDID;)
+            INNER JOIN WithdrawLimit wD ON acc.WDID = wD.WDID)
             WHERE acc.AccountID = @accId ;";
             SqlCommand cmd = new SqlCommand(cmdString, ServiceManager.conn);
             cmd.Parameters.AddWithValue("accId",accountID);

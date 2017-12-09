@@ -51,6 +51,8 @@
             this.btnNum2 = new System.Windows.Forms.Button();
             this.btnNum1 = new System.Windows.Forms.Button();
             this.cardpanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCardNo = new System.Windows.Forms.TextBox();
             this.btnInsertCard = new System.Windows.Forms.Button();
             this.keypad.SuspendLayout();
             this.cardpanel.SuspendLayout();
@@ -90,6 +92,7 @@
             resources.ApplyResources(this.button5, "button5");
             this.button5.Name = "button5";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -97,6 +100,7 @@
             resources.ApplyResources(this.button4, "button4");
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
@@ -234,6 +238,16 @@
             this.cardpanel.Controls.Add(this.btnInsertCard);
             resources.ApplyResources(this.cardpanel, "cardpanel");
             this.cardpanel.Name = "cardpanel";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // txtCardNo
+            // 
+            resources.ApplyResources(this.txtCardNo, "txtCardNo");
+            this.txtCardNo.Name = "txtCardNo";
             // 
             // btnInsertCard
             // 
