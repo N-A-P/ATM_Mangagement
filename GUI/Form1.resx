@@ -141,7 +141,7 @@
     <value>8</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 224</value>
+    <value>35, 280</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -189,7 +189,7 @@
     <value>3</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 83</value>
+    <value>35, 189</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -214,54 +214,53 @@
   </data>
   <data name="button5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
-        AABJRU5ErkJggg==
+        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
 </value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -269,10 +268,10 @@
     <value>Center</value>
   </data>
   <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1100, 189</value>
+    <value>1105, 260</value>
   </data>
   <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 92</value>
+    <value>90, 62</value>
   </data>
   <data name="button5.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -290,7 +289,7 @@
     <value>6</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1120, 83</value>
+    <value>1120, 189</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -336,183 +335,6 @@
   </data>
   <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnNum9.Name" xml:space="preserve">
-    <value>btnNum9</value>
-  </data>
-  <data name="&gt;&gt;btnNum9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum9.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum9.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnNum6.Name" xml:space="preserve">
-    <value>btnNum6</value>
-  </data>
-  <data name="&gt;&gt;btnNum6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum6.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum6.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnenter.Name" xml:space="preserve">
-    <value>btnenter</value>
-  </data>
-  <data name="&gt;&gt;btnenter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnenter.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnenter.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnclear.Name" xml:space="preserve">
-    <value>btnclear</value>
-  </data>
-  <data name="&gt;&gt;btnclear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnclear.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnclear.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btncancel.Name" xml:space="preserve">
-    <value>btncancel</value>
-  </data>
-  <data name="&gt;&gt;btncancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btncancel.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btncancel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnNum3.Name" xml:space="preserve">
-    <value>btnNum3</value>
-  </data>
-  <data name="&gt;&gt;btnNum3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum3.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum3.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;btnNum0.Name" xml:space="preserve">
-    <value>btnNum0</value>
-  </data>
-  <data name="&gt;&gt;btnNum0.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum0.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum0.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;btnNum8.Name" xml:space="preserve">
-    <value>btnNum8</value>
-  </data>
-  <data name="&gt;&gt;btnNum8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum8.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum8.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;btnNum7.Name" xml:space="preserve">
-    <value>btnNum7</value>
-  </data>
-  <data name="&gt;&gt;btnNum7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum7.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum7.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;btnNum5.Name" xml:space="preserve">
-    <value>btnNum5</value>
-  </data>
-  <data name="&gt;&gt;btnNum5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum5.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum5.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;btnNum4.Name" xml:space="preserve">
-    <value>btnNum4</value>
-  </data>
-  <data name="&gt;&gt;btnNum4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum4.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum4.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;btnNum2.Name" xml:space="preserve">
-    <value>btnNum2</value>
-  </data>
-  <data name="&gt;&gt;btnNum2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum2.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum2.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;btnNum1.Name" xml:space="preserve">
-    <value>btnNum1</value>
-  </data>
-  <data name="&gt;&gt;btnNum1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNum1.Parent" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;btnNum1.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="keypad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>429, 486</value>
-  </data>
-  <data name="keypad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 194</value>
-  </data>
-  <data name="keypad.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;keypad.Name" xml:space="preserve">
-    <value>keypad</value>
-  </data>
-  <data name="&gt;&gt;keypad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;keypad.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;keypad.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="btnNum9.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 114</value>
@@ -832,6 +654,45 @@
   <data name="&gt;&gt;btnNum1.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <data name="keypad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>429, 486</value>
+  </data>
+  <data name="keypad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 194</value>
+  </data>
+  <data name="keypad.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;keypad.Name" xml:space="preserve">
+    <value>keypad</value>
+  </data>
+  <data name="&gt;&gt;keypad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;keypad.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;keypad.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnInsertCard.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt, style=Bold</value>
+  </data>
+  <data name="btnInsertCard.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnInsertCard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>67, 66</value>
+  </data>
+  <data name="btnInsertCard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 57</value>
+  </data>
+  <data name="btnInsertCard.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnInsertCard.Text" xml:space="preserve">
+    <value>Insert Card</value>
+  </data>
   <data name="&gt;&gt;btnInsertCard.Name" xml:space="preserve">
     <value>btnInsertCard</value>
   </data>
@@ -863,36 +724,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cardpanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnInsertCard.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt, style=Bold</value>
-  </data>
-  <data name="btnInsertCard.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnInsertCard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 66</value>
-  </data>
-  <data name="btnInsertCard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 57</value>
-  </data>
-  <data name="btnInsertCard.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnInsertCard.Text" xml:space="preserve">
-    <value>Insert Card</value>
-  </data>
-  <data name="&gt;&gt;btnInsertCard.Name" xml:space="preserve">
-    <value>btnInsertCard</value>
-  </data>
-  <data name="&gt;&gt;btnInsertCard.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnInsertCard.Parent" xml:space="preserve">
-    <value>cardpanel</value>
-  </data>
-  <data name="&gt;&gt;btnInsertCard.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

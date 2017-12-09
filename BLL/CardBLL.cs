@@ -32,19 +32,18 @@ namespace BLL
             }
             return result;
         }
-        public void disableCard(string cardNo)
+        public Boolean checkPIN(string cardNo, string PIN,int atemps)
         {
-            cardDAL.DisableCard(cardNo);
-        }
-        
-
-        public Boolean checkPIN(string cardNo, string PIN)
-        {
+            
          Boolean result = false;
             card = cardDAL.getCardInfo(cardNo);
             if (card.PIN == PIN)
             {
                 result = true;
+            }
+            if (atemps == 3 && result == false)
+            {
+                cardDAL.DisableCard(cardNo);
             }
             return result;
         }
