@@ -13,7 +13,7 @@ namespace BLL
         AccountDAL accDAL = new AccountDAL();
         LogBLL logBLL = new LogBLL();
         ConfigBLL confBLL = new ConfigBLL();
-
+        StockBLL stockBLL = new StockBLL();
 
         public Account getAccInfo(int accID) {
             return accDAL.getAccInfo(accID);
@@ -48,9 +48,10 @@ namespace BLL
         //2: Vuot muc toi da rut trong ngay
         //3: Vuot muc toi da 1 lan rut
         //4: So tien rut nho hon toi thieu
+        //5: So tien trong cay khong du
         // status   = 0: Rut tien
         // status   = 1: Nhan tien
-        public int checkAmount(string cardNo, int accID, int amount, int status, int idConf)
+        public int checkAmount(string cardNo, int accID, int amount, int status)
         {
             int result = 0;
 
@@ -58,29 +59,28 @@ namespace BLL
             int withDrawLimit = getWithdrawLimit(accID);
             int overDrafLimit = getOverDraftLimit(accID);
             int amountTotal = logBLL.getAmount(cardNo);
-            
-            int minDrawConf = confBLL.getMinDraw(idConf);
-            int maxDrawConf = confBLL.getMaxDraw(idConf);
+            int totalMoney = stockBLL.getTotalMoney();
+            int minDrawConf = confBLL.getMinDraw();
+            int maxDrawConf = confBLL.getMaxDraw();
 
-            if ((currBalance + overDrafLimit) < amount)
-            {
+            if ((currBalance + overDrafLimit) < amount) {
                 return 1;
             }
 
-            if ((withDrawLimit + amountTotal) < amount)
-            {
+            if ((withDrawLimit + amountTotal) < amount) {
                 return 2;
             }
-            if (status == 0)
-            {
-                if (maxDrawConf < amount)
-                {
+            if (status == 0) {
+                if (maxDrawConf < amount) {
                     return 3;
                 }
 
-                if (minDrawConf > amount)
-                {
+                if (minDrawConf > amount) {
                     return 4;
+                }
+
+                if (totalMoney < amount) {
+                    return 5;
                 }
             }
 

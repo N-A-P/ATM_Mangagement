@@ -8,15 +8,14 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-    public class StockIDDAL
+    public class StockDAL
     {
-        public List<Stock> getStock(int atmID) {
+        public List<Stock> getListStock(int atmID) {
             ServiceManager.KetNoi();
             List<Stock> listStock = new List<Stock>();
-
             String cmdString =
-                @"Select Stock, Money FROM 
-                ((Stock st 
+                @"Select Stock.StockID, Stock.Quantity, Stock.MoneyID, Money.MoneyValue
+            FROM ((Stock st 
                 INNER JOIN ATM atm ON st.ATMID = atm.ATMID)
                 INNER JOIN Money m ON st.MoneyID = m.MoneyID)
                 Where st.ATMID = @id;";
@@ -25,15 +24,15 @@ namespace DAL
 
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read()) {
-                Stock st = new Stock();
+                
                 int stockID = (int)dr["StockID"];
                 int quantity = (int)dr["Quantity"];
-
-
-
-
+                int moneyID = (int)dr["MoneyID"];
+                int moneyValue = (int)dr["MoneyValue"];
+                Money money = new Money(moneyID, moneyValue);
+                Stock st = new Stock(stockID, money, quantity);
+                listStock.Add(st);
             }
-
 
             return listStock;
         }
