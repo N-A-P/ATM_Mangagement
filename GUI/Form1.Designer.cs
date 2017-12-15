@@ -89,7 +89,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.BackColor = System.Drawing.SystemColors.ScrollBar;
             resources.ApplyResources(this.button5, "button5");
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Name = "button5";
@@ -253,6 +253,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.cardpanel);
             this.Controls.Add(this.keypad);
             this.Controls.Add(this.button6);

@@ -26,10 +26,12 @@ namespace GUI
         BLL.BLL bus = new BLL.BLL();     
         public int accID = 97041;
         int atemps = 0;
+        public static string cardNumber;
         public string cardNo;
         
         private void Form1_Load(object sender, EventArgs e)
         {
+            GoFullscreen(true);
             WelcomeScreen welcomescr = new WelcomeScreen();
             welcomescr.MdiParent = this;
             welcomescr.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -38,6 +40,20 @@ namespace GUI
             welcomescr.Show();
         }
 
+        private void GoFullscreen(bool fullscreen)
+        {
+            if (fullscreen)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                this.Bounds = Screen.PrimaryScreen.Bounds;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+            }
+        }
 
         Validationfrm validfrm = new Validationfrm();
         ChangePINfrm changePINfrm = new ChangePINfrm();
@@ -187,10 +203,14 @@ namespace GUI
         {
             
             cardNo = ShowDialog("Nhập mã thẻ", "Input form");
+            
             if (bus.checkCard(cardNo))
             {
                 SwitchScreen(validfrm);
                 btnInsertCard.Enabled = false;
+                Form1.cardNumber = cardNo;
+                ConfigATM.ATMID = 1;
+                ConfigATM.ConfigID = 1;
             }
             else
             {

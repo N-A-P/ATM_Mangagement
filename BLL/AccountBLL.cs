@@ -53,7 +53,6 @@ namespace BLL
         // status   = 1: Nhan tien
         public int checkAmount(string cardNo, int accID, int amount, int status)
         {
-            int result = 0;
 
             int currBalance = getBalance(accID);
             int withDrawLimit = getWithdrawLimit(accID);

@@ -16,5 +16,10 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void CashTransferFrm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

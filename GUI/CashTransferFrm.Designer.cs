@@ -32,11 +32,13 @@
             // 
             // CashTransferFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 427);
+            this.ClientSize = new System.Drawing.Size(1802, 821);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "CashTransferFrm";
             this.Text = "CashTransferFrm";
+            this.Load += new System.EventHandler(this.CashTransferFrm_Load);
             this.ResumeLayout(false);
 
         }

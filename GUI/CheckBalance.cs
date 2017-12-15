@@ -20,7 +20,7 @@ namespace GUI
         {
             Form1.currentfunction = CurrentForm.checkBalance;
             addLayout();
-            lblBalance.Text = getBalance().ToString();
+            lblBalance.Text = getBalance().ToString() + " VND";
         }
 
         public void addLayout() {
