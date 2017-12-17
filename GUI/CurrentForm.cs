@@ -16,5 +16,6 @@ namespace GUI
         public static string withdraw = "withdraw";
         public static string changePIN = "changePIN";
         public static string transfer = "tranfer";
+        public static string success = "success";
     }
 }

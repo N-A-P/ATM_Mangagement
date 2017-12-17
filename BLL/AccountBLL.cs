@@ -18,6 +18,14 @@ namespace BLL
         public Account getAccInfo(int accID) {
             return accDAL.getAccInfo(accID);
         }
+
+        public bool checkAcc(int accID) {
+            Account acc = getAccInfo(accID);
+            if (acc.CustID != 0) {
+                return true;
+            }
+            return false;
+        }
         
         public int getBalance(int accID) {
             int balance = 0;
@@ -99,7 +107,12 @@ namespace BLL
             else {
                 newB = currBalance + newBalance;
             }
-            accDAL.updateBalance(accID, newBalance);
+            accDAL.updateBalance(accID, newB);
         }
+
+        public int getCustID(int accID) {
+            Account acc = getAccInfo(accID);
+            return acc.CustID;
+        } 
     }
 }

@@ -11,31 +11,19 @@ namespace DAO
     {
         public int CustID { get; set; }
         public string Name { get; set; }
-        public int Phone { get; set; }
+        public string Phone { get; set; }
         public string Email { get; set; }
         public string Addr { get; set; }
 
         public Customer() { }
 
-        public Customer(int id, string name, int phone, string email, string addr)
+        public Customer(int id, string name, string phone, string email, string addr)
         {
             this.CustID = id;
             this.Name = name;
             this.Phone = phone;
             this.Email = email;
             this.Addr = addr;
-        }
-
-        public Customer(SqlDataReader dr)
-        {
-            while (dr.Read())
-            {
-                this.CustID = (int)dr["CustID"];
-                this.Name = dr["Name"].ToString();
-                this.Email = dr["Email"].ToString();
-                this.Phone = (int)dr["Phone"];
-                this.Addr = dr["Addr"].ToString();
-            }
         }
     }
 

@@ -32,6 +32,11 @@ namespace BLL
             }
             return result;
         }
+
+        public Card getCardInfo(string cardNo) {
+            return cardDAL.getCardInfo(cardNo);
+        }
+
         public Boolean checkPIN(string cardNo, string PIN,int atemps)
         {
             

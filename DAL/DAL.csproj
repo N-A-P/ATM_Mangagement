@@ -46,6 +46,7 @@
     <Compile Include="ATMDAL.cs" />
     <Compile Include="CardDAL.cs" />
     <Compile Include="ConfigDAL.cs" />
+    <Compile Include="CustomerDAL.cs" />
     <Compile Include="LogDAL.cs" />
     <Compile Include="LogTypeDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

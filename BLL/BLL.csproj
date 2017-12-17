@@ -46,6 +46,7 @@
     <Compile Include="CardBLL.cs" />
     <Compile Include="ConfigATM.cs" />
     <Compile Include="ConfigBLL.cs" />
+    <Compile Include="CustomerBLL.cs" />
     <Compile Include="LogBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StockBLL.cs" />
