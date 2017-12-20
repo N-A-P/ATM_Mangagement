@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace BLL
 {
-    class WithDrawDAL
+    public static class ConfigATM
     {
-
+        public static int ATMID = 1;
+        public static int ConfigID = 1;
     }
 }

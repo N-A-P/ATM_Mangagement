@@ -12,8 +12,8 @@ namespace BLL
     {
         AccountBLL accBLL = new AccountBLL();
        
-        public int checkAmount(string cardNo, int accID, int amount, int configID) {
-            return accBLL.checkAmount(cardNo, accID, amount, 0, configID);
+        public int checkAmount(string cardNo, int accID, int amount) {
+            return accBLL.checkAmount(cardNo, accID, amount, 0);
         }
 
         public void updateBalance(int accID, int newBalance) {

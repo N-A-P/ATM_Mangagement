@@ -36,11 +36,10 @@ namespace DAO
 
         public Stock() { }
 
-        public Stock(int stockID, Money money, int atmID, int quantity)
+        public Stock(int stockID, Money money, int quantity)
         {
             this._StockID = stockID;
             this.Money = money;
-            this._ATMID = atmID;
             this._Quantity = quantity;
         }
         
