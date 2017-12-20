@@ -30,7 +30,6 @@
         {
             this.dgvLichSu = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichSu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,21 +54,11 @@
             this.label1.Text = "Lịch sử giao dịch ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(829, 350);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Cancel";
-            // 
             // ViewHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 407);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvLichSu);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -86,6 +75,5 @@
 
         private System.Windows.Forms.DataGridView dgvLichSu;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }

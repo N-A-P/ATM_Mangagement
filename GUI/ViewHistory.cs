@@ -20,12 +20,12 @@ namespace GUI
         Form1 fr1 = new Form1();
         private void ViewHistory_Load(object sender, EventArgs e)
         {
-            Form1.currentfunction = CurrentForm.viewHistory;
-            dgvLichSu.DataSource = logBLL.getLog(fr1.cardNo);
-            DataTable dt = logBLL.getLog(fr1.cardNo);
+            dgvLichSu.DataSource = logBLL.getLog(Form1.cardnumb);
+            DataTable dt = logBLL.getLog(Form1.cardnumb);
             configHienThi();
+            
         }
-
+        
         public void configHienThi() {
             dgvLichSu.RowHeadersVisible = false;
             dgvLichSu.Columns[0].HeaderText = "ID";

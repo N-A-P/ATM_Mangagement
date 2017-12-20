@@ -18,7 +18,6 @@ namespace GUI
 
         private void CheckBalance_Load(object sender, EventArgs e)
         {
-            Form1.currentfunction = CurrentForm.checkBalance;
             addLayout();
             lblBalance.Text = getBalance().ToString();
         }
