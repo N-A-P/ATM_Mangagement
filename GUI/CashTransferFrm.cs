@@ -17,7 +17,7 @@ namespace GUI
         TransferBLL transf = new TransferBLL();
         AccountBLL accBLL = new AccountBLL();
         CustomerBLL custBLL = new CustomerBLL();
-
+        LogBLL logBLL = new LogBLL();
         public bool success = false;
         public bool isInput = true;
         private TextBox focusedTextbox = null;
@@ -45,11 +45,12 @@ namespace GUI
             if (txtSoTaiKhoan.Text != "") {
                 try
                 {
-                    int accID = int.Parse(txtSoTaiKhoan.Text);
-                    result = accBLL.checkAcc(accID);
+                   // int accID = int.Parse(txtSoTaiKhoan.Text);
+                    result = bus.checkCard(txtSoTaiKhoan.Text);
+                    //result = accBLL.checkAcc(accID);
                 }
                 catch {
-                    lblAlert.Text = "Số tài khoản không chính xác";
+                    lblAlert.Text = "Số thẻ không chính xác";
                 }          
             }
             return result;
@@ -59,6 +60,7 @@ namespace GUI
             bool result = false;
             if (txtSoTienChuyen.Text == "") {
                 lblAlert.Text = "Số tiền không hợp lệ!!!";
+                focusTextbox();
                 return false;
             }
             int accID = InfoUser.CARD.AccountID;
@@ -68,6 +70,7 @@ namespace GUI
                 int amount = int.Parse(txtSoTienChuyen.Text);
                 if (amount == 0) {
                     lblAlert.Text = "Số tiền không hợp lệ!!!";
+                    focusTextbox();
                     return false;               
                 }
                 result = transf.checkAmount(accID, amount);
@@ -81,7 +84,7 @@ namespace GUI
 
         public void doTransf() {
             int amount = int.Parse(txtSoTienChuyen.Text);
-            int accID = int.Parse(txtSoTaiKhoan.Text);
+            int accID = getAccID();
 
             try
             {
@@ -96,13 +99,16 @@ namespace GUI
             catch {
                 lblAlert.Text = "Chuyển Tiền Thất Bại. Vui lòng thử lại!!!";
             }
-            
+        }
+
+        private int getAccID() {
+            int accID = bus.getAccID(txtSoTaiKhoan.Text);
+            return accID;
         }
 
         private int getCustID() { 
             int custID = 0;
-            int accID = int.Parse(txtSoTaiKhoan.Text);
-            custID = accBLL.getCustID(accID);
+            custID = accBLL.getCustID(getAccID());
             return custID;
         }
 
@@ -121,6 +127,23 @@ namespace GUI
                 txtSoTaiKhoan.Focus();
                 focusedTextbox = txtSoTaiKhoan;
             }
+        }
+
+        public void creatLog() {
+            DateTime logDate = DateTime.Now;
+            int amount = int.Parse(txtSoTienChuyen.Text);
+            string toCardNo = txtSoTaiKhoan.Text;
+            int atmID = ConfigATM.ATMID;
+            int logTypeID = 2;
+            string details = "";
+            string cardNo = InfoUser.CARD.CardNo;
+
+            Log log = new Log(4, logTypeID, atmID, cardNo, logDate, amount, details, toCardNo);
+            logBLL.createLog(log);
+        }
+
+        public void clearText() {
+            focusedTextbox.Text = "";
         }
 
         private void txtSoTaiKhoan_TextChanged(object sender, EventArgs e)

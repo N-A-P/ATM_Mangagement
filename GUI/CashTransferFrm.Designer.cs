@@ -48,9 +48,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(705, 245);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(399, 51);
+            this.label1.Size = new System.Drawing.Size(348, 51);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Tài khoản nhận tiền";
+            this.label1.Text = "Số Thẻ nhận tiền";
             // 
             // pictureBox1
             // 

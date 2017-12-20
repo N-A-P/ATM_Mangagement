@@ -107,6 +107,11 @@ namespace GUI
             {
                 validfrm.setPIN(validfrm.getPIN() + '3');
             }
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number3DidTouched();
+            }
+
         }
 
         private void btnNum4_Click(object sender, EventArgs e)
@@ -119,6 +124,11 @@ namespace GUI
             if (Form1.currentfunction == CurrentForm.validation)
             {
                 validfrm.setPIN(validfrm.getPIN() + '4');
+            }
+
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number4DidTouched();
             }
         }
 
@@ -133,6 +143,11 @@ namespace GUI
             {
 
             }
+
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number5DidTouched();
+            }
         }
 
         private void btnNum6_Click(object sender, EventArgs e)
@@ -145,6 +160,11 @@ namespace GUI
             if (Form1.currentfunction == CurrentForm.changePIN)
             {
 
+            }
+
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number6DidTouched();
             }
         }
 
@@ -159,6 +179,11 @@ namespace GUI
             {
 
             }
+
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number7DidTouched();
+            }
         }
 
         private void btnNum8_Click(object sender, EventArgs e)
@@ -171,6 +196,10 @@ namespace GUI
             if (Form1.currentfunction == CurrentForm.changePIN)
             {
 
+            }
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number8DidTouched();
             }
         }
 
@@ -185,6 +214,10 @@ namespace GUI
             {
 
             }
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number9DidTouched();
+            }
         }
 
         private void btnNum0_Click(object sender, EventArgs e)
@@ -198,6 +231,10 @@ namespace GUI
             {
 
             }
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number0DidTouched();
+            }
         }
 
         private void btnclear_Click(object sender, EventArgs e)
@@ -206,6 +243,10 @@ namespace GUI
             if(Form1.currentfunction == CurrentForm.validation)
             {
                 validfrm.setPIN("");
+            }
+
+            if (Form1.currentfunction == CurrentForm.transfer) {
+                transf.clearText();
             }
         }
 
@@ -219,7 +260,7 @@ namespace GUI
                 SwitchScreen(validfrm);
                 btnInsertCard.Enabled = false;
                 Form1.cardNumber = cardNo;
-                ConfigATM.ATMID = 1;
+                ConfigATM.ATMID = 122;
                 ConfigATM.ConfigID = 1;
                 InfoUser.CARD = bus.getCardInfo(cardNo);
 
@@ -303,15 +344,20 @@ namespace GUI
 
         private void cashTransFunc() {
 
-            if (transf.isInput) {
+            if (transf.isInput)
+            {
                 transf.checkInfo();
             }
-            if (transf.checkAmout())
-            {
-                transf.doTransf();
-                if (transf.success) {
-                    Success successFr = new Success();
-                    SwitchScreen(successFr);
+            else {
+                if (transf.checkAmout())
+                {
+                    transf.doTransf();
+                    if (transf.success)
+                    {
+                        transf.creatLog();
+                        Success successFr = new Success();
+                        SwitchScreen(successFr);
+                    }
                 }
             }
         }

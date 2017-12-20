@@ -8,7 +8,7 @@ namespace BLL
 {
     public static class ConfigATM
     {
-        public static int ATMID = 1;
+        public static int ATMID = 122;
         public static int ConfigID = 1;
     }
 }
