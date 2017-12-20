@@ -34,6 +34,7 @@
             this.pnfailure = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnPIN.SuspendLayout();
             this.pnfailure.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             // txtPIN
             // 
             this.txtPIN.Enabled = false;
-            this.txtPIN.Location = new System.Drawing.Point(296, 11);
+            this.txtPIN.Location = new System.Drawing.Point(299, 7);
             this.txtPIN.Name = "txtPIN";
             this.txtPIN.Size = new System.Drawing.Size(129, 20);
             this.txtPIN.TabIndex = 1;
@@ -76,7 +77,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 12);
+            this.label1.Location = new System.Drawing.Point(53, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 0;
@@ -85,11 +86,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(810, 347);
+            this.label3.Location = new System.Drawing.Point(808, 361);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Cancel";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(827, 269);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(21, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Ok";
             // 
             // Validationfrm
             // 
@@ -97,6 +107,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 407);
             this.Controls.Add(this.pnfailure);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pnPIN);
             this.Name = "Validationfrm";
@@ -119,5 +130,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPIN;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
