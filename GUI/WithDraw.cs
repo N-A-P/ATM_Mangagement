@@ -19,7 +19,6 @@ namespace GUI
 
         private void WithDraw_Load(object sender, EventArgs e)
         {
-            Form1.currentfunction = CurrentForm.withdraw;
         }
     }
 }

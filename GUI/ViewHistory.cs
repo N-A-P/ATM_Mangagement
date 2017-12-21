@@ -23,8 +23,9 @@ namespace GUI
             Form1.currentfunction = CurrentForm.viewHistory;
             dgvLichSu.DataSource = logBLL.getLog(Form1.cardNumber);
             configHienThi();
+            
         }
-
+        
         public void configHienThi() {
             dgvLichSu.RowHeadersVisible = false;
             dgvLichSu.Columns[0].HeaderText = "ID";

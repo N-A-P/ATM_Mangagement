@@ -16,71 +16,83 @@ namespace GUI
         {
             InitializeComponent();
         }
-        public static int currentfeild = 1;
-        public static bool confirm;
-        public static string oldPIN,newPIN;
-        private void ChangePINfrm_Load(object sender, EventArgs e)
+        int currentfeild = 1;
+
+        public string getoldPIN() { return txtoldPIN.Text; }
+        public string getnewPIN() { return txtnewPIN.Text; }
+        public string getconfirm() { return txtconfirm.Text; }
+        public bool checknewPIN()
         {
-            Form1.currentfunction = CurrentForm.changePIN;
-            txtoldPIN.Focus();
-        }
-        bool cfirm()
-        {
-            if (txtoldPIN.Text == txtnewPIN.Text)
+            if (txtconfirm.Text == txtnewPIN.Text && txtnewPIN.Text.Length == 6)
                 return true;
             return false;
         }
-
-        private void txtoldPIN_TextChanged(object sender, EventArgs e)
+        public void resetField() { txtconfirm.Text = ""; txtoldPIN.Text = ""; txtnewPIN.Text = ""; }
+        private void ChangePINfrm_Load(object sender, EventArgs e)
         {
-            checkfield();
+            txtoldPIN.Focus();
+            lblannounce.AutoSize = true;
         }
-
-        private void txtnewPIN_TextChanged(object sender, EventArgs e)
+        public void setPanel(string str)
         {
-            checkfield();
+            
+            lblannounce.Text = str;
         }
-
-        private void txtconfirm_TextChanged(object sender, EventArgs e)
+        public void settxtb(string str)
         {
-                ChangePINfrm.confirm = cfirm();
-                if (ChangePINfrm.confirm)
-                {
-                    ChangePINfrm.oldPIN = txtoldPIN.Text;
-                    ChangePINfrm.newPIN = txtnewPIN.Text;
-                }
-            checkfield();
+            if (currentfeild == 1)
+                txtoldPIN.Text = str;
+            if (currentfeild == 2)
+                txtnewPIN.Text = str;
+            if (currentfeild == 3)
+                txtconfirm.Text = str;
+
         }
-        public void  setfocus(int i)
+        public void setfocus(int i)
         {
             if (i == 1)
             {
                 txtoldPIN.Focus();
+                currentfeild = 1;
+                lblcp.Location = new Point(571, 158);
             }
-            if(i == 2)
+            if (i == 2)
             {
                 txtnewPIN.Focus();
+                currentfeild = 2;
+                lblcp.Location = new Point(571, 194);
             }
             if (i == 3)
             {
                 txtconfirm.Focus();
+                currentfeild = 3;
+                lblcp.Location = new Point(571, 231);
             }
+        }
+        public int getCurrentfield()
+        {
+            return currentfeild;
         }
         void checkfield()
         {
             if (txtoldPIN.Focus() == true)
             {
-                ChangePINfrm.currentfeild = 1;
+                currentfeild = 1;
             }
 
             if (txtnewPIN.Focus() == true)
             {
-                ChangePINfrm.currentfeild = 2;
+                currentfeild = 2;
             }
             if (txtconfirm.Focus() == true)
             {
-                ChangePINfrm.currentfeild = 3;
+                currentfeild = 3;
             }
+        }
+
+        private void lblcp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
