@@ -92,7 +92,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.Control;
+            this.button5.BackColor = System.Drawing.Color.LightGreen;
             resources.ApplyResources(this.button5, "button5");
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Name = "button5";

@@ -301,6 +301,8 @@ namespace GUI
 
             if (Form1.currentfunction == CurrentForm.transfer) {
                 transf.clearText();
+            }
+
             if (Form1.currentfunction == CurrentForm.changePIN)
             {
                 if (changePINfrm.getCurrentfield() == 1)
@@ -590,7 +592,6 @@ namespace GUI
                     btnInsertCard.Enabled = true;
 
                 }
-            }
             if (Form1.currentfunction == CurrentForm.success) {
                 Functionfrm fuctionfrm = new Functionfrm();
                 SwitchScreen(fuctionfrm);
