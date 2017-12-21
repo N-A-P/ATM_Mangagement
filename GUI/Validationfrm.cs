@@ -21,7 +21,6 @@ namespace GUI
        
         private void Validationfrm_Load(object sender, EventArgs e)
         {
-            Form1.currentfunction = CurrentForm.validation;
         }
         public string getPIN()
         {
