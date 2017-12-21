@@ -33,8 +33,17 @@ namespace DAL
                 Stock st = new Stock(stockID, money, quantity);
                 listStock.Add(st);
             }
-
             return listStock;
+        }
+
+        public void updateStock(int quantity, int moneyID) {
+            ServiceManager.KetNoi();
+            string cmdString = "Update Stock set Quantity=@quantity Where MoneyID = @moneyID";
+            SqlCommand cmd = new SqlCommand(cmdString, ServiceManager.conn);
+            cmd.Parameters.AddWithValue("quantity", quantity);
+            cmd.Parameters.AddWithValue("moneyID", moneyID);
+            cmd.ExecuteNonQuery();
+            ServiceManager.DongKetNoi();
         }
     }
 }

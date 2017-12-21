@@ -11,7 +11,7 @@ namespace DAO
    public class Account
     {
         public int AccountID { get; set; }
-        public string CustID { get; set; }
+        public int CustID { get; set; }
         public string AccountNo { get; set; }
         public string ODID { get; set; }
         public string WDID { get; set; }
@@ -37,7 +37,7 @@ namespace DAO
                 this.AccountID = (int)dr["AccountID"];
                 this.Balance = (int)dr["Balance"];
                 this.AccountNo = dr["AccountNo"].ToString();
-                this.Customer = new Customer(dr);
+                this.CustID = (int)dr["CustID"];
                 this.OverDraft = new OverDraftLimit(dr);
                 this.WithDraw = new WithDrawLimit(dr);
         }

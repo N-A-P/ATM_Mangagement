@@ -35,11 +35,9 @@ namespace DAL
         {
             int balance = 0;
             ServiceManager.KetNoi();
-            String cmdString = @"SELECT Account.Balance
-            FROM (((Account acc
+            String cmdString = @"SELECT Balance
+            FROM (Account acc
             INNER JOIN Customer cust ON acc.CustID = cust.CustID)
-            INNER JOIN OverDraft oD ON acc.ODID = oD.ODID)
-            INNER JOIN WithdrawLimit wD ON acc.WDID = wD.WDID)
             WHERE acc.AccountID = @accId ;";
             SqlCommand cmd = new SqlCommand(cmdString, ServiceManager.conn);
             cmd.Parameters.AddWithValue("accId", accountID);

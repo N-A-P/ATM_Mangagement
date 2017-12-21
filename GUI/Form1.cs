@@ -24,12 +24,16 @@ namespace GUI
         public static string currentfunction;
         
         BLL.BLL bus = new BLL.BLL();     
-        public int accID = 97041;
+        public int accID = 1;
         int atemps = 0;
+        public static string cardNumber;
         public string cardNo;
+
+        CashTransferFrm cashTransFm = new CashTransferFrm();
         
         private void Form1_Load(object sender, EventArgs e)
         {
+            GoFullscreen(false);
             WelcomeScreen welcomescr = new WelcomeScreen();
             welcomescr.MdiParent = this;
             welcomescr.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -38,10 +42,24 @@ namespace GUI
             welcomescr.Show();
         }
 
+        private void GoFullscreen(bool fullscreen)
+        {
+            if (fullscreen)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                this.Bounds = Screen.PrimaryScreen.Bounds;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+            }
+        }
 
         Validationfrm validfrm = new Validationfrm();
         ChangePINfrm changePINfrm = new ChangePINfrm();
-
+        CashTransferFrm transf = new CashTransferFrm();
 
 
         private void btnNum1_Click(object sender, EventArgs e)
@@ -54,6 +72,10 @@ namespace GUI
             if (Form1.currentfunction == CurrentForm.changePIN)
             {
 
+            }
+
+            if (Form1.currentfunction == CurrentForm.transfer) {
+                transf.number1DidTouched();
             }
         }
 
@@ -68,6 +90,10 @@ namespace GUI
             {
 
             }
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number2DidTouched();
+            }
         }
 
         private void btnNum3_Click(object sender, EventArgs e)
@@ -81,6 +107,11 @@ namespace GUI
             {
                 validfrm.setPIN(validfrm.getPIN() + '3');
             }
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number3DidTouched();
+            }
+
         }
 
         private void btnNum4_Click(object sender, EventArgs e)
@@ -93,6 +124,11 @@ namespace GUI
             if (Form1.currentfunction == CurrentForm.validation)
             {
                 validfrm.setPIN(validfrm.getPIN() + '4');
+            }
+
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number4DidTouched();
             }
         }
 
@@ -107,6 +143,11 @@ namespace GUI
             {
 
             }
+
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number5DidTouched();
+            }
         }
 
         private void btnNum6_Click(object sender, EventArgs e)
@@ -119,6 +160,11 @@ namespace GUI
             if (Form1.currentfunction == CurrentForm.changePIN)
             {
 
+            }
+
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number6DidTouched();
             }
         }
 
@@ -133,6 +179,11 @@ namespace GUI
             {
 
             }
+
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number7DidTouched();
+            }
         }
 
         private void btnNum8_Click(object sender, EventArgs e)
@@ -145,6 +196,10 @@ namespace GUI
             if (Form1.currentfunction == CurrentForm.changePIN)
             {
 
+            }
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number8DidTouched();
             }
         }
 
@@ -159,6 +214,10 @@ namespace GUI
             {
 
             }
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number9DidTouched();
+            }
         }
 
         private void btnNum0_Click(object sender, EventArgs e)
@@ -172,6 +231,10 @@ namespace GUI
             {
 
             }
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                transf.number0DidTouched();
+            }
         }
 
         private void btnclear_Click(object sender, EventArgs e)
@@ -181,16 +244,26 @@ namespace GUI
             {
                 validfrm.setPIN("");
             }
+
+            if (Form1.currentfunction == CurrentForm.transfer) {
+                transf.clearText();
+            }
         }
 
         private void btnInsertCard_Click(object sender, EventArgs e)
         {
             
             cardNo = ShowDialog("Nhập mã thẻ", "Input form");
+            
             if (bus.checkCard(cardNo))
             {
                 SwitchScreen(validfrm);
                 btnInsertCard.Enabled = false;
+                Form1.cardNumber = cardNo;
+                ConfigATM.ATMID = 122;
+                ConfigATM.ConfigID = 1;
+                InfoUser.CARD = bus.getCardInfo(cardNo);
+
             }
             else
             {
@@ -264,16 +337,41 @@ namespace GUI
                 }
             }
 
+            if (Form1.currentfunction == CurrentForm.transfer) {
+                cashTransFunc();
+            }
+        }
+
+        private void cashTransFunc() {
+
+            if (transf.isInput)
+            {
+                transf.checkInfo();
+            }
+            else {
+                if (transf.checkAmout())
+                {
+                    transf.doTransf();
+                    if (transf.success)
+                    {
+                        transf.creatLog();
+                        Success successFr = new Success();
+                        SwitchScreen(successFr);
+                    }
+                }
+            }
         }
 
         void SwitchScreen(Form form)
         {
-            screen.Controls.RemoveAt(0);
-            form.MdiParent = this;
-            screen.Controls.Add(form);
-            form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            form.Show();          
+            if (screen.Controls.Count > 0) {
+                screen.Controls.RemoveAt(0);
+                form.MdiParent = this;
+                screen.Controls.Add(form);
+                form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                form.Dock = DockStyle.Fill;
+                form.Show();    
+            }
         }
         private void btncancel_Click(object sender, EventArgs e)
         {
@@ -282,6 +380,12 @@ namespace GUI
                 WelcomeScreen welcomescr = new WelcomeScreen();
                 SwitchScreen(welcomescr);
                 btnInsertCard.Enabled = true;
+            }
+
+            if (Form1.currentfunction == CurrentForm.transfer)
+            {
+                WelcomeScreen welcomescr = new WelcomeScreen();
+                SwitchScreen(welcomescr);
             }
         }
       
@@ -296,7 +400,9 @@ namespace GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if (Form1.currentfunction == CurrentForm.function) {
+                SwitchScreen(transf);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -329,28 +435,25 @@ namespace GUI
                     // goto function screen
                 }
             }
-           
-
-
-
+            if (Form1.currentfunction == CurrentForm.success) {
+                Functionfrm fuctionfrm = new Functionfrm();
+                SwitchScreen(fuctionfrm);
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             Functionfrm fuctionfrm = new Functionfrm();
-            if (Form1.currentfunction == CurrentForm.validation)
+            if (Form1.currentfunction == CurrentForm.validation || Form1.currentfunction == CurrentForm.success || Form1.currentfunction == CurrentForm.function)
             {
                 WelcomeScreen welcomescr = new WelcomeScreen();
                 SwitchScreen(welcomescr);
                 btnInsertCard.Enabled = true;
             }
-            if (Form1.currentfunction == CurrentForm.checkBalance|| Form1.currentfunction == CurrentForm.viewHistory || Form1.currentfunction == CurrentForm.changePIN)
+            if (Form1.currentfunction == CurrentForm.checkBalance|| Form1.currentfunction == CurrentForm.viewHistory || Form1.currentfunction == CurrentForm.changePIN || Form1.currentfunction == CurrentForm.transfer)
             {
-                
                 SwitchScreen(fuctionfrm);
             }
-          
-            
         }
     }
 }

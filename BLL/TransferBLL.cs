@@ -8,16 +8,20 @@ using DAL;
 
 namespace BLL
 {
-    class TransferBLL
+   public class TransferBLL
     {
         AccountBLL accBLL = new AccountBLL();
-        public int checkAmount( string cardNo, int accID, int amount) {
-            return accBLL.checkAmount(cardNo, accID, amount, 1);
+        public bool checkAmount(int accID, int amount) {
+            bool result = false;
+            int balance = accBLL.getBalance(accID);
+            if (balance >= amount) {
+                result = true;
+            }
+            return result; 
         }
 
-        public void updateBalance(int accID, int newBalance) {
-            accBLL.updateBalance(accID, newBalance, 1);
+        public void updateBalance(int accID, int newBalance, int status) {
+            accBLL.updateBalance(accID, newBalance, status);
         }
-
     }
 }

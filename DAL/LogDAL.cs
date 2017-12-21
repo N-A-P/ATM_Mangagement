@@ -13,11 +13,10 @@ namespace DAL
     {
         public void CreateLog(Log log) { 
             ServiceManager.KetNoi();
-            String cmdString = 
-                            @"INSERT INTO LOG
-                            VALUES (@logID, @logDate, @amount, @details, @logTypeId, @atmId, @cardNo, @toCard);";
+            String cmdString =
+                            @"INSERT INTO Log (LogDate,Amount,Details,LogTypeID,ATMID,CardNo,ToCard)
+                            VALUES (@logDate, @amount, @details, @logTypeId, @atmId, @cardNo, @toCard);";
             SqlCommand cmd =  new SqlCommand(cmdString,ServiceManager.conn);
-            cmd.Parameters.AddWithValue("logID",log.LogID);
             cmd.Parameters.AddWithValue("logDate",log.LogDate);
             cmd.Parameters.AddWithValue("amount",log.Amount);
             cmd.Parameters.AddWithValue("details",log.Details);

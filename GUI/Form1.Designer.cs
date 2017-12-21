@@ -65,31 +65,34 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.LightGreen;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.LightGreen;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.button3, "button3");
             this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LightGreen;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.BackColor = System.Drawing.Color.LightGreen;
             resources.ApplyResources(this.button5, "button5");
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Name = "button5";
@@ -98,18 +101,20 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.LightGreen;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.button4, "button4");
             this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.LightGreen;
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.button6, "button6");
             this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // keypad
@@ -253,6 +258,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.cardpanel);
             this.Controls.Add(this.keypad);
             this.Controls.Add(this.button6);
