@@ -24,7 +24,7 @@ namespace GUI
         public static string currentfunction;
         
         BLL.BLL bus = new BLL.BLL();     
-        public int accID = 97041;
+        public int accID = 1;
         int atemps = 0;
         public static string cardNumber;
         public string cardNo;
