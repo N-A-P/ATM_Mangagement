@@ -8,7 +8,7 @@ using DAL;
 namespace BLL
 {
    
-    class WithDrawBLL
+    public class WithDrawBLL
     {
         AccountBLL accBLL = new AccountBLL();
        

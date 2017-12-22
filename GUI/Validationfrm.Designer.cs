@@ -46,45 +46,53 @@
             // 
             this.pnPIN.Controls.Add(this.txtPIN);
             this.pnPIN.Controls.Add(this.label2);
-            this.pnPIN.Location = new System.Drawing.Point(250, 160);
+            this.pnPIN.Location = new System.Drawing.Point(315, 308);
+            this.pnPIN.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pnPIN.Name = "pnPIN";
-            this.pnPIN.Size = new System.Drawing.Size(438, 35);
+            this.pnPIN.Size = new System.Drawing.Size(1233, 194);
             this.pnPIN.TabIndex = 0;
             // 
             // txtPIN
             // 
             this.txtPIN.Enabled = false;
-            this.txtPIN.Location = new System.Drawing.Point(299, 7);
+            this.txtPIN.Location = new System.Drawing.Point(493, 115);
+            this.txtPIN.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtPIN.Name = "txtPIN";
-            this.txtPIN.Size = new System.Drawing.Size(129, 20);
+            this.txtPIN.Size = new System.Drawing.Size(254, 31);
             this.txtPIN.TabIndex = 1;
+            this.txtPIN.UseSystemPasswordChar = true;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(3, 9);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 15);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(290, 18);
+            this.label2.Size = new System.Drawing.Size(1221, 54);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Nhập mã PIN:";
+            this.label2.Text = "Nhập mã PIN";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnfailure
             // 
             this.pnfailure.Controls.Add(this.label1);
-            this.pnfailure.Location = new System.Drawing.Point(339, 201);
+            this.pnfailure.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnfailure.ForeColor = System.Drawing.Color.OrangeRed;
+            this.pnfailure.Location = new System.Drawing.Point(697, 514);
+            this.pnfailure.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pnfailure.Name = "pnfailure";
-            this.pnfailure.Size = new System.Drawing.Size(202, 44);
+            this.pnfailure.Size = new System.Drawing.Size(517, 110);
             this.pnfailure.TabIndex = 1;
             this.pnfailure.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(33, 12);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(59, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.Size = new System.Drawing.Size(382, 51);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thẻ không hợp lệ!";
             // 
@@ -92,9 +100,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label3.Location = new System.Drawing.Point(827, 413);
+            this.label3.Location = new System.Drawing.Point(1654, 794);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 29);
+            this.label3.Size = new System.Drawing.Size(174, 55);
             this.label3.TabIndex = 1;
             this.label3.Text = "Cancel";
             // 
@@ -102,35 +111,37 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label4.Location = new System.Drawing.Point(827, 305);
+            this.label4.Location = new System.Drawing.Point(1654, 587);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 29);
+            this.label4.Size = new System.Drawing.Size(85, 55);
             this.label4.TabIndex = 1;
             this.label4.Text = "Ok";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-21, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(-42, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(984, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(1968, 237);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // Validationfrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(936, 449);
+            this.ClientSize = new System.Drawing.Size(1872, 863);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnfailure);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pnPIN);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Validationfrm";
             this.Text = "Validation";
             this.Load += new System.EventHandler(this.Validationfrm_Load);

@@ -15,7 +15,7 @@ namespace DAL
             String cmdString =
                 @"Select * FROM Config Where ConfigID = @configID";
             SqlCommand cmd = new SqlCommand(cmdString, ServiceManager.conn);
-            cmd.Parameters.AddWithValue("config", configID);
+            cmd.Parameters.AddWithValue("configID", configID);
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read()) {
                 int conID = (int)dr["ConfigID"];

@@ -36,13 +36,15 @@ namespace GUI
         Functionfrm functionfrm = new Functionfrm();
         WelcomeScreen welcomescr = new WelcomeScreen();
         CashTransferFrm cashTransFm = new CashTransferFrm();
+        WithDraw withDraw = new WithDraw();
+        WithDrawOther withDrawOther = new WithDrawOther();
 
         // define Functions
         #region
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            GoFullscreen(false);
+            GoFullscreen(false);           
             SwitchScreen(welcomescr);
             screen.Location    = new Point(this.Size.Width / 2 - screen.Width/2 , 10);
             button1.Location = new Point(screen.Location.X - button1.Width - 10, screen.Height - button3.Height + 10 - 208);
@@ -183,7 +185,7 @@ namespace GUI
             {
 
                 InfoUser.CARD = bus.getCardInfo(cardNumber);
-                SwitchScreen(functionfrm);
+               SwitchScreen(functionfrm);
                 atemps = 0;
             }
             if (atemps > 2)
@@ -209,9 +211,17 @@ namespace GUI
                     if (transf.success)
                     {
                         transf.creatLog();
+                        transf.clearAllText();
+                        transf.focusSTK();
                         Success successFr = new Success();
+                        successFr.updateBalance(0);
                         SwitchScreen(successFr);
                     }
+                }
+                else {
+                    WithDrawFailed failed = new WithDrawFailed();
+                    failed.updateStatus(6);
+                    SwitchScreen(failed); 
                 }
             }
         }
@@ -239,6 +249,11 @@ namespace GUI
             if (Form1.currentfunction == CurrentForm.transfer) {
                 transf.number1DidTouched();
             }
+
+            if (Form1.currentfunction == CurrentForm.withDrawOther)
+            {
+                withDrawOther.number1DidTouched();
+            }
         }
 
         private void btnNum2_Click(object sender, EventArgs e)
@@ -261,6 +276,11 @@ namespace GUI
             {
                 transf.number2DidTouched();
             }
+
+            if (Form1.currentfunction == CurrentForm.withDrawOther)
+            {
+                withDrawOther.number2DidTouched();
+            }
         }
 
         private void btnNum3_Click(object sender, EventArgs e)
@@ -279,9 +299,15 @@ namespace GUI
             {
                 validfrm.setPIN(validfrm.getPIN() + '3');
             }
+
             if (Form1.currentfunction == CurrentForm.transfer)
             {
                 transf.number3DidTouched();
+            }
+
+            if (Form1.currentfunction == CurrentForm.withDrawOther)
+            {
+                withDrawOther.number3DidTouched();
             }
 
         }
@@ -307,6 +333,11 @@ namespace GUI
             {
                 transf.number4DidTouched();
             }
+
+            if (Form1.currentfunction == CurrentForm.withDrawOther)
+            {
+                withDrawOther.number4DidTouched();
+            }
         }
 
         private void btnNum5_Click(object sender, EventArgs e)
@@ -329,6 +360,11 @@ namespace GUI
             if (Form1.currentfunction == CurrentForm.transfer)
             {
                 transf.number5DidTouched();
+            }
+
+            if (Form1.currentfunction == CurrentForm.withDrawOther)
+            {
+                withDrawOther.number5DidTouched();
             }
         }
 
@@ -353,6 +389,11 @@ namespace GUI
             {
                 transf.number6DidTouched();
             }
+
+            if (Form1.currentfunction == CurrentForm.withDrawOther)
+            {
+                withDrawOther.number6DidTouched();
+            }
         }
 
         private void btnNum7_Click(object sender, EventArgs e)
@@ -376,6 +417,11 @@ namespace GUI
             {
                 transf.number7DidTouched();
             }
+
+            if (Form1.currentfunction == CurrentForm.withDrawOther)
+            {
+                withDrawOther.number7DidTouched();
+            }
         }
 
         private void btnNum8_Click(object sender, EventArgs e)
@@ -394,9 +440,15 @@ namespace GUI
                  else if (changePINfrm.getCurrentfield() == 3)
                     changePINfrm.settxtb(changePINfrm.getconfirm() + '8');
             }
+
             if (Form1.currentfunction == CurrentForm.transfer)
             {
                 transf.number8DidTouched();
+            }
+
+            if (Form1.currentfunction == CurrentForm.withDrawOther)
+            {
+                withDrawOther.number8DidTouched();
             }
         }
 
@@ -416,9 +468,15 @@ namespace GUI
                  else if (changePINfrm.getCurrentfield() == 3)
                     changePINfrm.settxtb(changePINfrm.getconfirm() + '9');
             }
+
             if (Form1.currentfunction == CurrentForm.transfer)
             {
                 transf.number9DidTouched();
+            }
+
+            if (Form1.currentfunction == CurrentForm.withDrawOther)
+            {
+                withDrawOther.number9DidTouched();
             }
         }
 
@@ -438,9 +496,15 @@ namespace GUI
                 else if (changePINfrm.getCurrentfield() == 3)
                     changePINfrm.settxtb(changePINfrm.getconfirm() + '0');
             }
+
             if (Form1.currentfunction == CurrentForm.transfer)
             {
                 transf.number0DidTouched();
+            }
+
+            if (Form1.currentfunction == CurrentForm.withDrawOther)
+            {
+                withDrawOther.number0DidTouched();
             }
         }
 
@@ -452,8 +516,15 @@ namespace GUI
                 validfrm.setPIN("");
             }
 
-            if (Form1.currentfunction == CurrentForm.transfer) {
+            if (Form1.currentfunction == CurrentForm.transfer) 
+            {
                 transf.clearText();
+
+            }
+
+            if (Form1.currentfunction == CurrentForm.withDrawOther)
+            {
+                withDrawOther.clearText();
             }
 
             if (Form1.currentfunction == CurrentForm.changePIN)
@@ -494,7 +565,29 @@ namespace GUI
             {
                 cashTransFunc();
             }
+
+            if (Form1.currentfunction == CurrentForm.withDrawOther)
+            {
+                withDrawOther.withDraw();
+                if (withDrawOther.isAmount && withDrawOther.isSuccess)
+                {
+                    Success success = new Success();
+                    success.updateBalance(1);
+                    withDrawOther.creatLog();
+                    SwitchScreen(success);
+                   
+                }
+                else
+                {
+                    if (withDrawOther.didWithDraw) {
+                        WithDrawFailed failed = new WithDrawFailed();
+                        failed.updateStatus(withDrawOther.result);
+                        SwitchScreen(failed);                   
+                    }
+                }
+            }
         }
+
         private void btncancel_Click(object sender, EventArgs e)
         {
             if (Form1.currentfunction == CurrentForm.validation)
@@ -504,10 +597,11 @@ namespace GUI
                 btnInsertCard.Enabled = true;
             }
 
-            if (Form1.currentfunction == CurrentForm.transfer)
+            if (Form1.currentfunction == CurrentForm.transfer || Form1.currentfunction == CurrentForm.withDrawOther || Form1.currentfunction == CurrentForm.withdraw)
             {
                 btnInsertCard.Enabled = true;
-                SwitchScreen(welcomescr);
+                transf.clearAllText();
+                SwitchScreen(functionfrm);
             }
             if (Form1.currentfunction == CurrentForm.changePIN)
             {
@@ -544,6 +638,7 @@ namespace GUI
                     if (bus.checkCard(cardNumber))
                     {
                         SwitchScreen(validfrm);
+
                     }
                     else
                     {
@@ -561,25 +656,75 @@ namespace GUI
                 changePINfrm.resetField();
                 SwitchScreen(changePINfrm);
             }
+
+            if (Form1.currentfunction == CurrentForm.withdraw) {
+                doWithDraw(500000);
+            } 
+        }
+
+        private void doWithDraw(int amount) {
+            withDraw.withDraw(amount);
+            if (withDraw.isAmount && withDraw.isSuccess)
+            {
+                Success success = new Success();
+                success.updateBalance(1);
+                withDraw.creatLog(amount);
+                SwitchScreen(success);
+            }
+            else {
+                WithDrawFailed failed = new WithDrawFailed();
+                failed.updateStatus(withDraw.result);
+                SwitchScreen(failed);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (Form1.currentfunction == CurrentForm.function) {
+            if (Form1.currentfunction == CurrentForm.function)
+            {
+
+                Form1.currentfunction = CurrentForm.transfer;
                 SwitchScreen(transf);
+            }
+            else {
+                if (Form1.currentfunction == CurrentForm.withdraw)
+                {
+                    doWithDraw(1000000);
+                } 
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (Form1.currentfunction == CurrentForm.function)
+            {
+                SwitchScreen(withDraw);
+            }
+            else {
+                if (Form1.currentfunction == CurrentForm.withdraw)
+                {
+                    doWithDraw(2000000);
+                }
+            }
 
+             
         }
         private void button4_Click(object sender, EventArgs e)
         {
             if (Form1.currentfunction == CurrentForm.function)
             {
+                Form1.currentfunction = CurrentForm.checkBalance;
+                frCheckBalance.checkBalance();
                 SwitchScreen(frCheckBalance);
             }
+            else {
+                if (Form1.currentfunction == CurrentForm.withdraw)
+                {
+                    doWithDraw(3000000);
+                } 
+            }
+
+
 
         }
 
@@ -587,7 +732,7 @@ namespace GUI
         {
             if (Form1.currentfunction == CurrentForm.function)
             {
-                
+                Form1.currentfunction = CurrentForm.viewHistory;
                 SwitchScreen(viewHis);
             }
             
@@ -600,14 +745,44 @@ namespace GUI
                 atemps++;
                 login(atemps);
             }
-            if (Form1.currentfunction == CurrentForm.success) {
-                SwitchScreen(functionfrm);
+
+            if (Form1.currentfunction == CurrentForm.withdraw)
+            {
+                doWithDraw(5000000);
             }
+            else {
+                if (Form1.currentfunction == CurrentForm.withDrawOther)
+                {
+                    withDrawOther.withDraw();
+                    if (withDrawOther.isAmount && withDrawOther.isSuccess)
+                    {
+                        Success success = new Success();
+                        success.updateBalance(1);
+                        SwitchScreen(success);
+                    }
+                    else
+                    {
+                        if (withDrawOther.didWithDraw)
+                        {
+                            WithDrawFailed failed = new WithDrawFailed();
+                            failed.updateStatus(withDrawOther.result);
+                            SwitchScreen(failed);
+                        }
+                    }
+                }
+                else
+                {
+                    if (Form1.currentfunction == CurrentForm.success || Form1.currentfunction == CurrentForm.failed)
+                    {
+                        SwitchScreen(functionfrm);
+                    }
+                }
+            } 
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (Form1.currentfunction == CurrentForm.validation || Form1.currentfunction == CurrentForm.success || Form1.currentfunction == CurrentForm.function)
+            if (Form1.currentfunction == CurrentForm.validation || Form1.currentfunction == CurrentForm.success || Form1.currentfunction == CurrentForm.function || Form1.currentfunction == CurrentForm.failed)
             {
                // WelcomeScreen welcomescr = new WelcomeScreen();
                 SwitchScreen(welcomescr);
@@ -616,6 +791,8 @@ namespace GUI
             }
             else if (Form1.currentfunction == CurrentForm.checkBalance || Form1.currentfunction == CurrentForm.viewHistory || Form1.currentfunction == CurrentForm.changePIN || Form1.currentfunction == CurrentForm.transfer)
             {
+                transf.focusSTK();
+                transf.clearAllText();             
                 SwitchScreen(functionfrm);
             }
             else if (Form1.currentfunction == "#1" || Form1.currentfunction == "#3")
@@ -625,6 +802,18 @@ namespace GUI
             else if (Form1.currentfunction == "#2" || Form1.currentfunction == "#4")
             {
                 SwitchScreen(welcomescr);
+            }
+            if (Form1.currentfunction == CurrentForm.withdraw)
+            {
+                withDrawOther.clearText();
+                Form1.currentfunction = CurrentForm.withDrawOther;
+                SwitchScreen(withDrawOther);
+            }
+            else {
+                if (Form1.currentfunction == CurrentForm.withDrawOther)
+                {
+                    SwitchScreen(functionfrm);
+                }
             }
         }
     }

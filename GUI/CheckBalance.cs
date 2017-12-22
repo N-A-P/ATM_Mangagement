@@ -19,7 +19,7 @@ namespace GUI
         private void CheckBalance_Load(object sender, EventArgs e)
         {
             addLayout();
-            lblBalance.Text = getBalance().ToString() + " VND";
+            
         }
 
         public void addLayout() {
@@ -34,6 +34,13 @@ namespace GUI
             AccountBLL accBLL = new AccountBLL();
             LogBLL logBLL = new LogBLL();
             return accBLL.getBalance(InfoUser.CARD.AccountID);
+        }
+
+        public void checkBalance() {
+            string moneyStr = getBalance().ToString();
+            Decimal money = Convert.ToDecimal(moneyStr);
+            string value = String.Format("{0:0,0 VNĐ}", money);
+            lblBalance.Text = value;
         }
     }
 }

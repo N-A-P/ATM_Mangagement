@@ -32,10 +32,10 @@ namespace DAL
         public DataTable getLogs(string cardNo) {
             ServiceManager.KetNoi();
             String cmdString =
-            @"SELECT Log.LogID, Log.LogDate, Log.Amount, Log.Details, ATM.Branch, ATM.Address, Log.CardNo, Log.ToCard 
+            @"SELECT log.LogDate, log.Amount, log.Details, lt.Description, atm.Branch, atm.Address, log.CardNo, log.ToCard
             FROM ((LOG log
-            INNER JOIN ATM atm ON log.ATMID = atm.ATMID)
             INNER JOIN LogType lt ON log.LogTypeID = lt.LogTypeID)
+            INNER JOIN ATM atm ON log.ATMID = atm.ATMID)
             WHERE log.CardNo = @cardNo ;";
             SqlCommand cmd = new SqlCommand(cmdString, ServiceManager.conn);
             cmd.Parameters.AddWithValue("cardNo", cardNo);
@@ -76,9 +76,12 @@ namespace DAL
 
             SqlDataReader dr = cmd.ExecuteReader();
 
-            while (dr.Read()) { 
+            while (dr.Read()) {
+                int logTypeID = (int)dr["LogTypeID"];               
                 int am = (int)dr["Amount"];
-                amount = amount + am;
+                if (logTypeID == 1) {
+                    amount = amount + am;
+                }            
             }
             ServiceManager.DongKetNoi();
             return amount;

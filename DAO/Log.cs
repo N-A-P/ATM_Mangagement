@@ -30,5 +30,16 @@ namespace DAO
             this.Details   = details;
             this.CardNoTo = toCardNo;
         }
+
+        public Log( int logTypeID, int atmID, string cardNo, DateTime logDate, int amount, string details, string toCardNo)
+        {
+            this.LogTypeID = logTypeID;
+            this.ATMID = atmID;
+            this.CardNo = cardNo;
+            this.LogDate = logDate;
+            this.Amount = amount;
+            this.Details = details;
+            this.CardNoTo = toCardNo;
+        }
     }
 }

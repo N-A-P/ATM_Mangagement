@@ -51,7 +51,7 @@ namespace BLL
             limit = oD.Value;
             return limit;
         }
-
+        //0: Được phép
         //1: Vuot muc thau chi
         //2: Vuot muc toi da rut trong ngay
         //3: Vuot muc toi da 1 lan rut
@@ -66,7 +66,7 @@ namespace BLL
             int withDrawLimit = getWithdrawLimit(accID);
             int overDrafLimit = getOverDraftLimit(accID);
             int amountTotal = logBLL.getAmount(cardNo);
-            int totalMoney = stockBLL.getTotalMoney();
+            //int totalMoney = stockBLL.getTotalMoney();
             int minDrawConf = confBLL.getMinDraw();
             int maxDrawConf = confBLL.getMaxDraw();
 
@@ -74,7 +74,7 @@ namespace BLL
                 return 1;
             }
 
-            if ((withDrawLimit + amountTotal) < amount) {
+            if ((withDrawLimit + amountTotal) > amount) {
                 return 2;
             }
             if (status == 0) {
@@ -86,9 +86,9 @@ namespace BLL
                     return 4;
                 }
 
-                if (totalMoney < amount) {
-                    return 5;
-                }
+               // if (totalMoney < amount) {
+               //     return 5;
+               // }
             }
 
             return 0;

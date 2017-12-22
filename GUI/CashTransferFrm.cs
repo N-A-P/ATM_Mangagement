@@ -31,17 +31,22 @@ namespace GUI
         {
             lblAlert.Text = "";
             txtSoTaiKhoan.Focus();
+            imgST.Visible = true;
+            imgT.Visible = false;
+
             focusedTextbox = txtSoTaiKhoan;
         }
         
         public void focusTextbox() {
             txtSoTienChuyen.Focus();
             focusedTextbox = txtSoTienChuyen;
+            imgST.Visible = false;
+            imgT.Visible = true;
         }
 
         private bool checkAcc() {
             bool result = false;
-            if (txtSoTaiKhoan.Text != "") {
+            if ((txtSoTaiKhoan.Text != "") && (txtSoTaiKhoan.Text != InfoUser.CARD.CardNo)) {
                 try
                 {
                    // int accID = int.Parse(txtSoTaiKhoan.Text);
@@ -91,7 +96,7 @@ namespace GUI
                 transf.updateBalance(accID, amount, 1);
 
                 // Trừ tiền
-                transf.updateBalance(InfoUser.CARD.AccountID, amount, 0);
+                transf.updateBalance(InfoUser.CARD.AccountID, amount + 3000, 0);
 
                 success = true;
             }
@@ -137,12 +142,25 @@ namespace GUI
             string details = "";
             string cardNo = InfoUser.CARD.CardNo;
 
-            Log log = new Log(4, logTypeID, atmID, cardNo, logDate, amount, details, toCardNo);
+            Log log = new Log(logTypeID, atmID, cardNo, logDate, amount, details, toCardNo);
             logBLL.createLog(log);
+        }
+
+        public void focusSTK() {
+            txtSoTaiKhoan.Focus();
+            focusedTextbox = txtSoTaiKhoan;
+            imgST.Visible = true;
+            imgT.Visible = false;
         }
 
         public void clearText() {
             focusedTextbox.Text = "";
+        }
+
+        public void clearAllText() {
+            txtSoTaiKhoan.Text = "";
+            txtTenNguoiHuong.Text = "";
+            txtSoTienChuyen.Text = "";
         }
 
         private void txtSoTaiKhoan_TextChanged(object sender, EventArgs e)
