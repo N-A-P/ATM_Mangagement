@@ -44,6 +44,16 @@ namespace GUI
         {
             GoFullscreen(false);
             SwitchScreen(welcomescr);
+            screen.Location    = new Point(this.Size.Width / 2 - screen.Width/2 , 10);
+            button1.Location = new Point(screen.Location.X - button1.Width - 10, screen.Height - button3.Height + 10 - 208);
+            button2.Location   = new Point(screen.Location.X - button1.Width - 10, screen.Height - button2.Height + 10 - 103);
+            button3.Location   = new Point(screen.Location.X - button1.Width - 10, screen.Height - button1.Height + 10);            
+            button4.Location   = new Point(screen.Location.X + screen.Width + 10, screen.Height - button2.Height + 10 - 208);
+            button5.Location   = new Point(screen.Location.X + screen.Width + 10, screen.Height - button2.Height + 10 - 103);
+            button6.Location   = new Point(screen.Location.X + screen.Width + 10, screen.Height - button1.Height + 10);
+            keypad.Location    = new Point(this.Size.Width / 2 - screen.Width / 2 + keypad.Width / 2 - keypad.Width /3, screen.Height + 20);
+            cardpanel.Location = new Point(this.Size.Width / 2 + cardpanel.Width / 2, screen.Height + 20);
+            SwitchScreen(functionfrm);
         }
 
         private void GoFullscreen(bool fullscreen)
@@ -66,6 +76,7 @@ namespace GUI
             {
                 Width = 500,
                 Height = 150,
+                MaximizeBox = false,
                 FormBorderStyle = FormBorderStyle.FixedDialog,
                 Text = caption,
                 StartPosition = FormStartPosition.CenterScreen
@@ -598,7 +609,7 @@ namespace GUI
         {
             if (Form1.currentfunction == CurrentForm.validation || Form1.currentfunction == CurrentForm.success || Form1.currentfunction == CurrentForm.function)
             {
-                WelcomeScreen welcomescr = new WelcomeScreen();
+               // WelcomeScreen welcomescr = new WelcomeScreen();
                 SwitchScreen(welcomescr);
                 btnInsertCard.Enabled = true;
                 validfrm = new Validationfrm();

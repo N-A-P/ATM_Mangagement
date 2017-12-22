@@ -31,6 +31,14 @@ namespace GUI
         private void ChangePINfrm_Load(object sender, EventArgs e)
         {
             txtoldPIN.Focus();
+            txtoldPIN.Location = new Point(this.Size.Width / 2 - txtoldPIN.Width / 2, this.Size.Height / 2 - 50);
+            txtnewPIN.Location = new Point(this.Size.Width / 2 - txtnewPIN.Width / 2, this.Size.Height / 2);
+            txtconfirm.Location = new Point(this.Size.Width / 2 - txtconfirm.Width / 2, this.Size.Height / 2 + 50);
+            label1.Location = new Point(this.Size.Width / 2 - txtoldPIN.Width, this.Size.Height / 2 - 45);
+            label2.Location = new Point(this.Size.Width / 2 - txtoldPIN.Width , this.Size.Height / 2 + 5);
+            label3.Location = new Point(this.Size.Width / 2 - txtoldPIN.Width, this.Size.Height / 2 + 55);
+            label4.Location = new Point(this.Size.Width / 2 - txtoldPIN.Width / 2, txtconfirm.Location.Y + 50);
+            lblcp.Location = new Point(txtoldPIN.Location.X + txtnewPIN.Width + 10, this.Size.Height / 2 - 50);
         }
 
         public void settxtb(string str)
@@ -49,19 +57,19 @@ namespace GUI
             {
                 txtoldPIN.Focus();
                 currentfeild = 1;
-                lblcp.Location = new Point(571, 158);
+                lblcp.Location = new Point(txtoldPIN.Location.X + txtnewPIN.Width + 10, this.Size.Height / 2 - 55);
             }
             if (i == 2)
             {
                 txtnewPIN.Focus();
                 currentfeild = 2;
-                lblcp.Location = new Point(571, 194);
+                lblcp.Location = new Point(txtnewPIN.Location.X + txtnewPIN.Width + 10, this.Size.Height / 2 - 5);
             }
             if (i == 3)
             {
                 txtconfirm.Focus();
                 currentfeild = 3;
-                lblcp.Location = new Point(571, 231);
+                lblcp.Location = new Point(txtconfirm.Location.X + txtnewPIN.Width + 10, this.Size.Height / 2 + 45);
             }
         }
         public int getCurrentfield()

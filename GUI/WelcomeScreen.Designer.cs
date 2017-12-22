@@ -36,7 +36,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.Location = new System.Drawing.Point(157, 337);
+            this.label1.Location = new System.Drawing.Point(210, 336);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(483, 62);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(802, 408);
+            this.ClientSize = new System.Drawing.Size(901, 407);
             this.Controls.Add(this.label1);
             this.Name = "WelcomeScreen";
             this.Text = "WelcomeScreen";
