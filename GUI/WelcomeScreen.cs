@@ -20,6 +20,7 @@ namespace GUI
         private void WelcomeScreen_Load(object sender, EventArgs e)
         {
             label1.BackColor = System.Drawing.Color.Transparent;
+            label1.Location = new Point(this.Size.Width / 2 - label1.Width / 2, this.Size.Height - this.Size.Height / 9);
         }
     }
 }
