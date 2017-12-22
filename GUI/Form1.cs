@@ -22,26 +22,28 @@ namespace GUI
             this.IsMdiContainer = true;           
         }
         AccountBLL accbll = new AccountBLL();
-        public static string currentfunction;
-        public static string cardnumb;
-        
-        BLL.BLL bus = new BLL.BLL();     
-        public int accID = 1;
+        public static string currentfunction;        
+        BLL.BLL bus = new BLL.BLL();
         int atemps = 0;
-        public static string cardNumber;
-        public string cardNo;
+        public string cardNumber;
 
+
+        ViewHistory viewHis = new ViewHistory();
+        CheckBalance frCheckBalance = new CheckBalance();
+        Validationfrm validfrm = new Validationfrm();
+        ChangePINfrm changePINfrm = new ChangePINfrm();
+        CashTransferFrm transf = new CashTransferFrm();
+        Functionfrm functionfrm = new Functionfrm();
+        WelcomeScreen welcomescr = new WelcomeScreen();
         CashTransferFrm cashTransFm = new CashTransferFrm();
-        
+
+        // define Functions
+        #region
+
         private void Form1_Load(object sender, EventArgs e)
         {
             GoFullscreen(false);
-            WelcomeScreen welcomescr = new WelcomeScreen();
-            welcomescr.MdiParent = this;
-            welcomescr.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            welcomescr.Dock = DockStyle.Fill;
-            screen.Controls.Add(welcomescr);
-            welcomescr.Show();
+            SwitchScreen(welcomescr);
         }
 
         private void GoFullscreen(bool fullscreen)
@@ -58,14 +60,154 @@ namespace GUI
                 this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             }
         }
+        string ShowDialog(string text, string caption)
+        {
+            Form prompt = new Form()
+            {
+                Width = 500,
+                Height = 150,
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                Text = caption,
+                StartPosition = FormStartPosition.CenterScreen
+            };
+            Label textLabel = new Label() { Left = 50, Top = 20, Text = text };
+            TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 400 };
+            Button confirmation = new Button() { Text = "Ok", Left = 350, Width = 100, Top = 70, DialogResult = DialogResult.OK };
+            confirmation.Click += (sender, e) => { prompt.Close(); };
+            prompt.Controls.Add(textBox);
+            prompt.Controls.Add(confirmation);
+            prompt.Controls.Add(textLabel);
+            prompt.AcceptButton = confirmation;
+            return prompt.ShowDialog() == DialogResult.OK ? textBox.Text : "";
+        }
+        void SwitchScreen(Form form)
+        {
+            screen.Controls.Clear();
+            form.MdiParent = this;
+            screen.Controls.Add(form);
+            form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+            // switch checkpoint
+            #region
+            if (form is ChangePINfrm)
+            {
+                currentfunction = CurrentForm.changePIN;
+            }
+            else if (form is Functionfrm)
+            {
+                currentfunction = CurrentForm.function;
+            }
+            else if (form is ViewHistory)
+            {
+                currentfunction = CurrentForm.viewHistory;
+            }
+            else if (form is Validationfrm)
+            {
+                currentfunction = CurrentForm.validation;
+            }
+            else if (form is WelcomeScreen)
+            {
+                currentfunction = CurrentForm.welcomscr;
+            }
+            else if (form is CheckBalance)
+            {
+                currentfunction = CurrentForm.checkBalance;
+            }
+            else if (form is WithDraw)
+            {
+                currentfunction = CurrentForm.withdraw;
+            }
+            else if (form is CashTransferFrm)
+            {
+                currentfunction = CurrentForm.transfer;
+            }
 
-        Validationfrm validfrm = new Validationfrm();
-        ChangePINfrm changePINfrm = new ChangePINfrm();
-        CashTransferFrm transf = new CashTransferFrm();
-        Functionfrm functionfrm = new Functionfrm();
-        WelcomeScreen welcomescr = new WelcomeScreen();
+            #endregion
+        }
+        void changePIN()
+        {
+            Form form = new Form();
+            Label lblaounce = new Label();
+            form.Controls.Add(lblaounce);
+            lblaounce.Location = new Point(screen.Width / 2 - lblaounce.Width, screen.Height / 2);
+            lblaounce.AutoSize = true;
+            Label lbl = new Label();
+            lbl.Text = "OK";
+            lbl.Location = new Point(805, 364);
+            form.Controls.Add(lbl);
+            if (changePINfrm.checknewPIN())
+            {
+                if (bus.checkPIN(cardNumber, changePINfrm.getoldPIN(), 0))
+                {
+                    bus.ChangePIN(cardNumber, changePINfrm.getnewPIN());
+                    lblaounce.Text = "Đổi PIN thành công";
+                    SwitchScreen(form);
+                    currentfunction = "#1";
+                }
+                else
+                {
+                    lblaounce.Text = "Sai mã PIN cũ";
+                    SwitchScreen(form);
+                    currentfunction = "#2";
+                }
 
+            }
+            else
+            {
+                lblaounce.Text = "Mã PIN mới phải có 6 ký tự số và phải trùng nhau!";
+                SwitchScreen(form);
+                currentfunction = "#3";
+            }
+        }
+        void login(int attemp)
+        {
+            bool check = bus.checkPIN(cardNumber, validfrm.getPIN(), atemps);
+            if (!check)
+            {
+                validfrm.setlbl("Bạn đã nhập sai mã PIN " + atemps + " lần, nhập sai 3 lần sẽ bị khóa thẻ");
+                validfrm.setPIN("");
+            }
+            else
+            {
 
+                InfoUser.CARD = bus.getCardInfo(cardNumber);
+                SwitchScreen(functionfrm);
+                atemps = 0;
+            }
+            if (atemps > 2)
+            {
+                MessageBox.Show("Thẻ của bạn bị khóa do nhập sai PIN quá nhiều lần. Hãy tới chi nhánh ngân hàng gần nhất để được giúp đỡ!");
+                SwitchScreen(welcomescr);
+                atemps = 0;
+                btnInsertCard.Enabled = true;
+            }
+        }
+        private void cashTransFunc()
+        {
+
+            if (transf.isInput)
+            {
+                transf.checkInfo();
+            }
+            else
+            {
+                if (transf.checkAmout())
+                {
+                    transf.doTransf();
+                    if (transf.success)
+                    {
+                        transf.creatLog();
+                        Success successFr = new Success();
+                        SwitchScreen(successFr);
+                    }
+                }
+            }
+        }
+        #endregion
+
+        // keypad
+        #region
         private void btnNum1_Click(object sender, EventArgs e)
         {
             if (Form1.currentfunction == CurrentForm.validation)
@@ -313,76 +455,15 @@ namespace GUI
                     changePINfrm.settxtb("");
             }
         }
-
-        private void btnInsertCard_Click(object sender, EventArgs e)
-        {
-            cardNo = null;
-            cardNo = ShowDialog("Mã thẻ", "Nhập mã thẻ");
-            Form1.cardnumb = cardNo;
-            if (bus.checkCard(cardNo))
-            {
-                SwitchScreen(validfrm);
-                btnInsertCard.Enabled = false;
-                Form1.cardNumber = cardNo;
-                ConfigATM.ATMID = 122;
-                ConfigATM.ConfigID = 1;
-                InfoUser.CARD = bus.getCardInfo(cardNo);
-
-            }
-            else
-            {
-                validfrm.InvalidCard();
-                SwitchScreen(validfrm);
-            }
-            
-        }
-        public static string ShowDialog(string text, string caption)
-        {
-            Form prompt = new Form()
-            {
-                Width = 500,
-                Height = 150,
-                FormBorderStyle = FormBorderStyle.FixedDialog,
-                Text = caption,
-                StartPosition = FormStartPosition.CenterScreen
-            };
-            Label textLabel = new Label() { Left = 50, Top = 20, Text = text };
-            TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 400 };
-            Button confirmation = new Button() { Text = "Ok", Left = 350, Width = 100, Top = 70, DialogResult = DialogResult.OK };
-            confirmation.Click += (sender, e) => { prompt.Close(); };
-            prompt.Controls.Add(textBox);
-            prompt.Controls.Add(confirmation);
-            prompt.Controls.Add(textLabel);
-            prompt.AcceptButton = confirmation;
-            return prompt.ShowDialog() == DialogResult.OK ? textBox.Text : "";
-        }
-
-
         private void btnenter_Click(object sender, EventArgs e)
         {
             if (Form1.currentfunction == CurrentForm.validation)
             {
                 atemps++;
-                bool check = bus.checkPIN(cardNo, validfrm.getPIN(),atemps);
-                if (!check)
-                {
-                    validfrm.setlbl("Bạn đã nhập sai mã PIN "+atemps+" lần, nhập sai 3 lần sẽ bị khóa thẻ");
-                    validfrm.setPIN("");
-                }
-                else
-                {
-                    SwitchScreen(functionfrm);
-                    atemps = 0;
-                }
-                if (atemps > 2)
-                { 
-                    MessageBox.Show("Thẻ của bạn bị khóa do nhập sai PIN quá nhiều lần. Hãy tới chi nhánh ngân hàng gần nhất để được giúp đỡ!");
-                    SwitchScreen(welcomescr);
-                    btnInsertCard.Enabled = true;
-                }
+                login(atemps);
             }
 
-            if(Form1.currentfunction == CurrentForm.changePIN)
+            if (Form1.currentfunction == CurrentForm.changePIN)
             {
                 if (changePINfrm.getCurrentfield() == 1)
                 {
@@ -392,88 +473,29 @@ namespace GUI
                 {
                     changePINfrm.setfocus(3);
                 }
-            }
-
-            if (Form1.currentfunction == CurrentForm.transfer) {
-                cashTransFunc();
-            }
-        }
-
-        private void cashTransFunc() {
-
-            if (transf.isInput)
-            {
-                transf.checkInfo();
-            }
-            else {
-                if (transf.checkAmout())
+                else
                 {
-                    transf.doTransf();
-                    if (transf.success)
-                    {
-                        transf.creatLog();
-                        Success successFr = new Success();
-                        SwitchScreen(successFr);
-                    }
+                    changePIN();
                 }
             }
-        }
 
-        void SwitchScreen(Form form)
-        {
-            screen.Controls.Clear();
-            form.MdiParent = this;
-            screen.Controls.Add(form);
-            form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            form.Show();
-            // switch checkpoint
-            #region
-            if (form is ChangePINfrm)
+            if (Form1.currentfunction == CurrentForm.transfer)
             {
-                currentfunction = CurrentForm.changePIN;
+                cashTransFunc();
             }
-            else if (form is Functionfrm)
-            {
-                currentfunction = CurrentForm.function;
-            }
-            else if (form is ViewHistory)
-            {
-                currentfunction = CurrentForm.viewHistory;
-            }
-            else if (form is Validationfrm)
-            {
-                currentfunction = CurrentForm.validation;
-            }
-            else if (form is WelcomeScreen)
-            {
-                currentfunction = CurrentForm.welcomscr;
-            }
-            else if (form is CheckBalance)
-            {
-                currentfunction = CurrentForm.checkBalance;
-            }
-            else if (form is WithDraw)
-            {
-                currentfunction = CurrentForm.withdraw;
-            }
-            else if (form is CashTransferFrm)
-            {
-                currentfunction = CurrentForm.transfer;
-            }
-            #endregion
         }
         private void btncancel_Click(object sender, EventArgs e)
         {
             if (Form1.currentfunction == CurrentForm.validation)
             {
-                WelcomeScreen welcomescr = new WelcomeScreen();
+
                 SwitchScreen(welcomescr);
                 btnInsertCard.Enabled = true;
             }
 
             if (Form1.currentfunction == CurrentForm.transfer)
             {
+                btnInsertCard.Enabled = true;
                 SwitchScreen(welcomescr);
             }
             if (Form1.currentfunction == CurrentForm.changePIN)
@@ -493,9 +515,32 @@ namespace GUI
                     changePINfrm.settxtb("");
                     changePINfrm.setfocus(2);
                 }
-            }      
+            }
+            if(Form1.currentfunction == "#3")
+            {
+                SwitchScreen(welcomescr);
+            }
         }
-      
+        #endregion
+
+        private void btnInsertCard_Click(object sender, EventArgs e)
+        {
+            
+            cardNumber = ShowDialog("Mã thẻ", "Nhập mã thẻ");
+            if(cardNumber != "")
+                {
+                    btnInsertCard.Enabled = false;
+                    if (bus.checkCard(cardNumber))
+                    {
+                        SwitchScreen(validfrm);
+                    }
+                    else
+                    {
+                        validfrm.InvalidCard();
+                        SwitchScreen(validfrm);
+                    } 
+                } 
+        }     
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -522,7 +567,6 @@ namespace GUI
         {
             if (Form1.currentfunction == CurrentForm.function)
             {
-                CheckBalance frCheckBalance = new CheckBalance();
                 SwitchScreen(frCheckBalance);
             }
 
@@ -532,69 +576,21 @@ namespace GUI
         {
             if (Form1.currentfunction == CurrentForm.function)
             {
-                ViewHistory viewHis = new ViewHistory();
+                
                 SwitchScreen(viewHis);
             }
             
             else if(Form1.currentfunction == CurrentForm.changePIN)
             {
-                Form form = new Form();
-                Label lblaounce = new Label();
-                form.Controls.Add(lblaounce);
-                lblaounce.Location = new Point(screen.Width / 2 - lblaounce.Width, screen.Height / 2);
-                lblaounce.AutoSize = true;
-                Label lbl = new Label();
-                lbl.Text = "OK";
-                lbl.Location = new Point(805,364);
-                form.Controls.Add(lbl);
-                if (changePINfrm.checknewPIN())
-                {                  
-                    if( bus.checkPIN(cardNo,changePINfrm.getoldPIN(), 0))
-                    {
-                        bus.ChangePIN(cardNo, changePINfrm.getnewPIN());
-                        lblaounce.Text = "Đổi PIN thành công";
-                        SwitchScreen(form);
-                        currentfunction = "#1";
-                    }
-                    else
-                    {
-                        lblaounce.Text = "Sai mã PIN cũ";
-                        SwitchScreen(form);
-                        currentfunction = "#2";
-                    }
-                    
-                }
-                else {
-                    lblaounce.Text = "Mã PIN mới phải có 6 ký tự số và phải trùng nhau!";
-                    SwitchScreen(form);
-                    currentfunction = "#3";
-                }
+                changePIN();
             }
             else if (Form1.currentfunction == CurrentForm.validation)
             {
                 atemps++;
-                bool check = bus.checkPIN(cardNo, validfrm.getPIN(), atemps);
-                if (!check)
-                {
-                    validfrm.setlbl("Bạn đã nhập sai mã PIN " + atemps + " lần, nhập sai 3 lần sẽ bị khóa thẻ");
-                    validfrm.setPIN("");
-                }
-            }else
-                {
-                    validfrm.setPIN("");
-                    SwitchScreen(functionfrm);
-                    atemps = 0;
-                }
-                if (atemps > 2)
-                {
-                    MessageBox.Show("Thẻ của bạn bị khóa do nhập sai PIN quá nhiều lần. Hãy tới chi nhánh ngân hàng gần nhất để được giúp đỡ!");
-                    SwitchScreen(welcomescr);
-                    btnInsertCard.Enabled = true;
-
-                }
+                login(atemps);
+            }
             if (Form1.currentfunction == CurrentForm.success) {
-                Functionfrm fuctionfrm = new Functionfrm();
-                SwitchScreen(fuctionfrm);
+                SwitchScreen(functionfrm);
             }
         }
 
@@ -605,23 +601,19 @@ namespace GUI
                 WelcomeScreen welcomescr = new WelcomeScreen();
                 SwitchScreen(welcomescr);
                 btnInsertCard.Enabled = true;
-                validfrm = new Validationfrm(); 
+                validfrm = new Validationfrm();
             }
-            else if (Form1.currentfunction == CurrentForm.checkBalance|| Form1.currentfunction == CurrentForm.viewHistory || Form1.currentfunction == CurrentForm.changePIN || Form1.currentfunction == CurrentForm.transfer)
+            else if (Form1.currentfunction == CurrentForm.checkBalance || Form1.currentfunction == CurrentForm.viewHistory || Form1.currentfunction == CurrentForm.changePIN || Form1.currentfunction == CurrentForm.transfer)
             {
                 SwitchScreen(functionfrm);
             }
-            else if(Form1.currentfunction == "#1")
+            else if (Form1.currentfunction == "#1" || Form1.currentfunction == "#3")
             {
                 SwitchScreen(functionfrm);
             }
-            else if (Form1.currentfunction == "#2")
+            else if (Form1.currentfunction == "#2" || Form1.currentfunction == "#4")
             {
                 SwitchScreen(welcomescr);
-            }
-            else if (Form1.currentfunction == "#3")
-            {
-                SwitchScreen(functionfrm);
             }
         }
     }

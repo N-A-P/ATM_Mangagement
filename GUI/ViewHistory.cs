@@ -17,11 +17,9 @@ namespace GUI
             InitializeComponent();
         }
         LogBLL logBLL = new LogBLL();
-        Form1 fr1 = new Form1();
         private void ViewHistory_Load(object sender, EventArgs e)
         {
-            Form1.currentfunction = CurrentForm.viewHistory;
-            dgvLichSu.DataSource = logBLL.getLog(Form1.cardNumber);
+            dgvLichSu.DataSource = logBLL.getLog(InfoUser.CARD.CardNo);
             configHienThi();
         }
         

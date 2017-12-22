@@ -19,6 +19,7 @@ namespace GUI
 
         private void WelcomeScreen_Load(object sender, EventArgs e)
         {
+            label1.BackColor = System.Drawing.Color.Transparent;
         }
     }
 }

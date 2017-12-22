@@ -33,8 +33,7 @@ namespace GUI
         public int getBalance() {
             AccountBLL accBLL = new AccountBLL();
             LogBLL logBLL = new LogBLL();
-            Form1 fr1 = new Form1();
-            return accBLL.getBalance(fr1.accID);
+            return accBLL.getBalance(InfoUser.CARD.AccountID);
         }
     }
 }

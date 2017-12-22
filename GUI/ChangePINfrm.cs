@@ -31,13 +31,8 @@ namespace GUI
         private void ChangePINfrm_Load(object sender, EventArgs e)
         {
             txtoldPIN.Focus();
-            lblannounce.AutoSize = true;
         }
-        public void setPanel(string str)
-        {
-            
-            lblannounce.Text = str;
-        }
+
         public void settxtb(string str)
         {
             if (currentfeild == 1)

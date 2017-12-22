@@ -35,24 +35,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(467, 672);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label1.Location = new System.Drawing.Point(157, 337);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(769, 102);
+            this.label1.Size = new System.Drawing.Size(483, 62);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chào mừng bạn đến với hệ thống ATM.\r\nNhấn nút Insert Card để nhập thẻ.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // WelcomeScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1806, 785);
+            this.ClientSize = new System.Drawing.Size(802, 408);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "WelcomeScreen";
             this.Text = "WelcomeScreen";
             this.Load += new System.EventHandler(this.WelcomeScreen_Load);

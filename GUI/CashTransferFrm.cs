@@ -30,7 +30,6 @@ namespace GUI
         private void CashTransferFrm_Load(object sender, EventArgs e)
         {
             lblAlert.Text = "";
-            Form1.currentfunction = CurrentForm.transfer;
             txtSoTaiKhoan.Focus();
             focusedTextbox = txtSoTaiKhoan;
         }

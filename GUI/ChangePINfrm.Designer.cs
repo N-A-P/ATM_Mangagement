@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePINfrm));
             this.txtoldPIN = new System.Windows.Forms.TextBox();
             this.txtnewPIN = new System.Windows.Forms.TextBox();
             this.txtconfirm = new System.Windows.Forms.TextBox();
@@ -37,8 +38,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblannounce = new System.Windows.Forms.Label();
             this.lblcp = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtoldPIN
@@ -95,18 +97,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(805, 276);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(805, 305);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.Size = new System.Drawing.Size(76, 24);
             this.label5.TabIndex = 1;
             this.label5.Text = "Đồng ý";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(805, 354);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(805, 413);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 13);
+            this.label6.Size = new System.Drawing.Size(47, 24);
             this.label6.TabIndex = 1;
             this.label6.Text = "Hủy";
             // 
@@ -119,15 +123,6 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "(Mã PIN gồm 6 chữ số)";
             // 
-            // lblannounce
-            // 
-            this.lblannounce.AutoSize = true;
-            this.lblannounce.Location = new System.Drawing.Point(356, 101);
-            this.lblannounce.Name = "lblannounce";
-            this.lblannounce.Size = new System.Drawing.Size(130, 13);
-            this.lblannounce.TabIndex = 3;
-            this.lblannounce.Text = "Đổi mật khẩu thành công!";
-            // 
             // lblcp
             // 
             this.lblcp.AutoSize = true;
@@ -138,12 +133,24 @@
             this.lblcp.Text = "<-";
             this.lblcp.Click += new System.EventHandler(this.lblcp_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-4, 1);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(935, 107);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
             // ChangePINfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(901, 427);
-            this.Controls.Add(this.lblannounce);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblcp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -157,6 +164,7 @@
             this.Name = "ChangePINfrm";
             this.Text = "ChangePINfrm";
             this.Load += new System.EventHandler(this.ChangePINfrm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,7 +181,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblannounce;
         private System.Windows.Forms.Label lblcp;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
