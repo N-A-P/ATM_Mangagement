@@ -14,7 +14,7 @@ namespace DAL
             ServiceManager.KetNoi();
             List<Stock> listStock = new List<Stock>();
             String cmdString =
-                @"Select Stock.StockID, Stock.Quantity, Stock.MoneyID, Money.MoneyValue
+                @"Select (Stock.StockID, Stock.MoneyID, Stock.Quantity, Money.MoneyValue)
             FROM ((Stock st 
                 INNER JOIN ATM atm ON st.ATMID = atm.ATMID)
                 INNER JOIN Money m ON st.MoneyID = m.MoneyID)

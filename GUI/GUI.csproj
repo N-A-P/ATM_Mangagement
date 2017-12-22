@@ -111,6 +111,18 @@
     <Compile Include="WithDraw.Designer.cs">
       <DependentUpon>WithDraw.cs</DependentUpon>
     </Compile>
+    <Compile Include="WithDrawOther.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithDrawOther.Designer.cs">
+      <DependentUpon>WithDrawOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WithDrawFailed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithDrawFailed.Designer.cs">
+      <DependentUpon>WithDrawFailed.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Success.resx">
       <DependentUpon>Success.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +163,12 @@
     <EmbeddedResource Include="WithDraw.resx">
       <DependentUpon>WithDraw.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WithDrawOther.resx">
+      <DependentUpon>WithDrawOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WithDrawFailed.resx">
+      <DependentUpon>WithDrawFailed.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -179,6 +197,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pad.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
